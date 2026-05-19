@@ -1,0 +1,1067 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop – Furniro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/shop.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="site-header__inner u-container">
+        <a href="../Home/index.html" class="site-header__brand brand-mark">
+          <img
+            src="../Home/images/logo.svg"
+            alt="Furniro logo"
+            class="brand-mark__logo"
+          />
+          <span class="brand-mark__name">Furniro</span>
+        </a>
+
+        <button
+          class="nav-hamburger"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="nav-hamburger__bar"></span>
+          <span class="nav-hamburger__bar"></span>
+          <span class="nav-hamburger__bar"></span>
+        </button>
+
+        <nav class="site-header__nav nav-menu" id="main-nav">
+          <a href="../Home/index.html" class="nav-menu__link">Home</a>
+          <a href="shop.html" class="nav-menu__link nav-menu__link--active"
+            >Shop</a
+          >
+          <a href="#" class="nav-menu__link">About</a>
+          <a href="#" class="nav-menu__link">Contact</a>
+
+          <div
+            class="site-header__actions header-actions header-actions--mobile"
+          >
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Account"
+            >
+              <img src="../Home/images/account-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Search"
+            >
+              <img src="../Home/images/search-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Wishlist"
+            >
+              <img src="../Home/images/heart-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Cart"
+            >
+              <img src="../Home/images/cart-icon.svg" alt="" />
+            </button>
+          </div>
+        </nav>
+
+        <div
+          class="site-header__actions header-actions header-actions--desktop"
+        >
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Account"
+          >
+            <img src="../Home/images/account-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Search"
+          >
+            <img src="../Home/images/search-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Wishlist"
+          >
+            <img src="../Home/images/heart-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Cart"
+          >
+            <img src="../Home/images/cart-icon.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Banner -->
+      <section class="page-hero">
+        <img
+          src="../Home/images/rectangle 1.png"
+          alt="Shop banner background"
+          class="page-hero__bg"
+        />
+        <div class="page-hero__content">
+          <h1 class="page-hero__title">Shop</h1>
+          <nav class="breadcrumb" aria-label="breadcrumb">
+            <a href="../Home/index.html" class="breadcrumb__link">Home</a>
+            <img
+              src="../Home/images/arrow-shop.svg"
+              alt=""
+              class="breadcrumb__sep"
+              aria-hidden="true"
+            />
+            <span class="breadcrumb__current">Shop</span>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Filters and Toolbar -->
+      <section class="shop-toolbar">
+        <div class="shop-toolbar__inner u-container">
+          <!-- Left: filter + view toggles -->
+          <div class="shop-toolbar__left">
+            <button
+              class="toolbar-btn toolbar-btn--filter"
+              id="filterToggleBtn"
+              type="button"
+              aria-expanded="false"
+            >
+              <img src="../Home/images/filtering.svg" alt="" />
+              <span>Filter</span>
+            </button>
+
+            <div class="toolbar-divider" aria-hidden="true"></div>
+
+            <button
+              class="toolbar-btn toolbar-view toolbar-view--active"
+              id="viewGrid"
+              type="button"
+              aria-label="Grid view"
+              data-view="grid"
+            >
+              <img src="../Home/images/grid-round.svg" alt="" />
+            </button>
+            <button
+              class="toolbar-btn toolbar-view"
+              id="viewList"
+              type="button"
+              aria-label="List view"
+              data-view="list"
+            >
+              <img src="../Home/images/view-list.svg" alt="" />
+            </button>
+
+            <div class="toolbar-divider" aria-hidden="true"></div>
+            <p class="toolbar-results">
+              Showing <span id="rangeStart">1</span>–<span id="rangeEnd"
+                >16</span
+              >
+              of <span id="totalResults">32</span> results
+            </p>
+          </div>
+
+          <!-- Right: Show count + Sort -->
+          <div class="shop-toolbar__right">
+            <label class="toolbar-label" for="showCount">Show</label>
+            <div class="toolbar-select-wrap">
+              <select class="toolbar-select" id="showCount" name="showCount">
+                <option value="8">8</option>
+                <option value="16" selected>16</option>
+                <option value="24">24</option>
+                <option value="32">32</option>
+              </select>
+            </div>
+
+            <label class="toolbar-label" for="sortBy">Short by</label>
+            <div class="toolbar-select-wrap">
+              <select class="toolbar-select" id="sortBy" name="sortBy">
+                <option value="default">Default</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="newest">Newest</option>
+                <option value="name-asc">Name: A–Z</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filter Drawer -->
+      <aside class="filter-drawer" id="filterDrawer" aria-hidden="true">
+        <div class="filter-drawer__inner u-container">
+          <div class="filter-group">
+            <h3 class="filter-group__title">Category</h3>
+            <ul class="filter-group__list">
+              <li>
+                <label><input type="checkbox" /> Dining</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Living</label>
+              </li>
+              <li>
+                <label><input type="checkbox" checked /> Bedroom</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Outdoor</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Decor</label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <h3 class="filter-group__title">Price Range</h3>
+            <div class="filter-price">
+              <input
+                type="range"
+                min="0"
+                max="20000000"
+                step="100000"
+                value="20000000"
+                class="filter-range"
+                id="priceRange"
+              />
+              <div class="filter-price__labels">
+                <span>Rp 0</span>
+                <span id="priceRangeVal">Rp 20.000.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h3 class="filter-group__title">Availability</h3>
+            <ul class="filter-group__list">
+              <li>
+                <label><input type="checkbox" checked /> In Stock</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> On Sale</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> New Arrivals</label>
+              </li>
+            </ul>
+          </div>
+
+          <button class="filter-apply-btn" type="button">Apply Filters</button>
+        </div>
+      </aside>
+
+      <!-- Product Grid -->
+      <section class="shop-products u-container" id="shopProducts">
+        <div class="products__grid" id="productsGrid">
+          <!-- Row 1 -->
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-1.png"
+                alt="Syltherine chair"
+                loading="lazy"
+              />
+              <span class="product-card__badge product-card__badge--sale"
+                >-30%</span
+              >
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Syltherine</h3>
+              <p class="product-card__subtitle">Stylish cafe chair</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 2.500.000</span>
+                <span class="product-card__price-old">Rp 3.500.000</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-2.png"
+                alt="Leviosa chair"
+                loading="lazy"
+              />
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Leviosa</h3>
+              <p class="product-card__subtitle">Stylish cafe chair</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 2.500.000</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-3.png"
+                alt="Lolito sofa"
+                loading="lazy"
+              />
+              <span class="product-card__badge product-card__badge--sale"
+                >-50%</span
+              >
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Lolito</h3>
+              <p class="product-card__subtitle">Luxury big sofa</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 7.000.000</span>
+                <span class="product-card__price-old">Rp 14.000.000</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-4.png"
+                alt="Respira stool"
+                loading="lazy"
+              />
+              <span class="product-card__badge product-card__badge--new"
+                >New</span
+              >
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Respira</h3>
+              <p class="product-card__subtitle">Outdoor bar table and stool</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 500.000</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Row 2 -->
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-5.png"
+                alt="Grifo lamp"
+                loading="lazy"
+              />
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Grifo</h3>
+              <p class="product-card__subtitle">Night lamp</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 1.500.000</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-6.png"
+                alt="Muggo mug"
+                loading="lazy"
+              />
+              <span class="product-card__badge product-card__badge--new"
+                >New</span
+              >
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Muggo</h3>
+              <p class="product-card__subtitle">Small mug</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 150.000</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-7.png"
+                alt="Pingky bed set"
+                loading="lazy"
+              />
+              <span class="product-card__badge product-card__badge--sale"
+                >-50%</span
+              >
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Pingky</h3>
+              <p class="product-card__subtitle">Cute bed set</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 7.000.000</span>
+                <span class="product-card__price-old">Rp 14.000.000</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-8.png"
+                alt="Potty flower pot"
+                loading="lazy"
+              />
+              <span class="product-card__badge product-card__badge--new"
+                >New</span
+              >
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Potty</h3>
+              <p class="product-card__subtitle">Minimalist flower pot</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 2.500.000</span>
+                <span class="product-card__price-old">Rp 3.500.000</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Row 3 -->
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-1.png"
+                alt="Syltherine chair"
+                loading="lazy"
+              />
+              <span class="product-card__badge product-card__badge--sale"
+                >-30%</span
+              >
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Syltherine</h3>
+              <p class="product-card__subtitle">Stylish cafe chair</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 2.500.000</span>
+                <span class="product-card__price-old">Rp 3.500.000</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-2.png"
+                alt="Leviosa chair"
+                loading="lazy"
+              />
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Leviosa</h3>
+              <p class="product-card__subtitle">Stylish cafe chair</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 2.500.000</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-3.png"
+                alt="Lolito sofa"
+                loading="lazy"
+              />
+              <span class="product-card__badge product-card__badge--sale"
+                >-50%</span
+              >
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Lolito</h3>
+              <p class="product-card__subtitle">Luxury big sofa</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 7.000.000</span>
+                <span class="product-card__price-old">Rp 14.000.000</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-4.png"
+                alt="Respira stool"
+                loading="lazy"
+              />
+              <span class="product-card__badge product-card__badge--new"
+                >New</span
+              >
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Respira</h3>
+              <p class="product-card__subtitle">Outdoor bar table and stool</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 500.000</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Row 4 -->
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-5.png"
+                alt="Grifo lamp"
+                loading="lazy"
+              />
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Grifo</h3>
+              <p class="product-card__subtitle">Night lamp</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 1.500.000</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-6.png"
+                alt="Muggo mug"
+                loading="lazy"
+              />
+              <span class="product-card__badge product-card__badge--new"
+                >New</span
+              >
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Muggo</h3>
+              <p class="product-card__subtitle">Small mug</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 150.000</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-7.png"
+                alt="Pingky bed set"
+                loading="lazy"
+              />
+              <span class="product-card__badge product-card__badge--sale"
+                >-50%</span
+              >
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Pingky</h3>
+              <p class="product-card__subtitle">Cute bed set</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 7.000.000</span>
+                <span class="product-card__price-old">Rp 14.000.000</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <img
+                src="../Home/images/product-8.png"
+                alt="Potty flower pot"
+                loading="lazy"
+              />
+              <span class="product-card__badge product-card__badge--new"
+                >New</span
+              >
+              <div class="product-card__overlay">
+                <button class="product-card__overlay-cta" type="button">
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span
+                    ><img src="../Home/images/share.svg" alt="" />Share</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/compare.svg"
+                      alt=""
+                    />Compare</span
+                  >
+                  <span
+                    ><img
+                      src="../Home/images/heart-icon-sm.svg"
+                      alt=""
+                    />Like</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Potty</h3>
+              <p class="product-card__subtitle">Minimalist flower pot</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price">Rp 2.500.000</span>
+                <span class="product-card__price-old">Rp 3.500.000</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Pagination -->
+        <nav class="pagination" aria-label="Product pages">
+          <button
+            class="pagination__btn pagination__btn--active"
+            type="button"
+            aria-current="page"
+          >
+            1
+          </button>
+          <button class="pagination__btn" type="button">2</button>
+          <button class="pagination__btn" type="button">3</button>
+          <button class="pagination__btn pagination__btn--next" type="button">
+            Next
+          </button>
+        </nav>
+      </section>
+
+      <!-- Trust Strip -->
+      <section class="trust-strip">
+        <div class="trust-strip__inner u-container">
+          <div class="trust-item">
+            <img
+              src="../Home/images/trophy.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>High Quality</strong>
+              <span>crafted from top materials</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img
+              src="../Home/images/guarantee.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>Warranty Protection</strong>
+              <span>Over 2 years</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img
+              src="../Home/images/shipping.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>Free Shipping</strong>
+              <span>Order over 150 $</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img
+              src="../Home/images/customer-support.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>24 / 7 Support</strong>
+              <span>Dedicated support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer__top u-container">
+        <div class="site-footer__brand-block">
+          <h3 class="site-footer__brand">Furniro.</h3>
+          <p class="site-footer__address">
+            400 University Drive Suite 200 Coral Gables, FL 33134 USA
+          </p>
+        </div>
+
+        <div class="site-footer__group">
+          <h4 class="site-footer__group-title">Links</h4>
+          <a href="../Home/index.html" class="site-footer__link">Home</a>
+          <a href="shop.html" class="site-footer__link">Shop</a>
+          <a href="#" class="site-footer__link">About</a>
+          <a href="#" class="site-footer__link">Contact</a>
+        </div>
+
+        <div class="site-footer__group">
+          <h4 class="site-footer__group-title">Help</h4>
+          <a href="#" class="site-footer__link">Payment Options</a>
+          <a href="#" class="site-footer__link">Returns</a>
+          <a href="#" class="site-footer__link">Privacy Policies</a>
+        </div>
+
+        <div class="site-footer__group site-footer__group--newsletter">
+          <h4 class="site-footer__group-title">Newsletter</h4>
+          <form class="site-footer__newsletter" action="#" method="post">
+            <input
+              class="site-footer__input"
+              type="email"
+              placeholder="Enter Your Email Address"
+            />
+            <button class="site-footer__subscribe" type="submit">
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom u-container">
+        <p class="site-footer__copyright">2023 furino. All rights reverved</p>
+      </div>
+    </footer>
+
+    <script src="./js/shop.js"></script>
+  </body>
+</html>
