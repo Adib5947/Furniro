@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Comparison – Furniro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/comparison.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="site-header__inner u-container">
+        <a href="../Home/index.html" class="site-header__brand brand-mark">
+          <img
+            src="../Home/images/logo.svg"
+            alt="Furniro logo"
+            class="brand-mark__logo"
+          />
+          <span class="brand-mark__name">Furniro</span>
+        </a>
+
+        <button
+          class="nav-hamburger"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="nav-hamburger__bar"></span>
+          <span class="nav-hamburger__bar"></span>
+          <span class="nav-hamburger__bar"></span>
+        </button>
+
+        <nav class="site-header__nav nav-menu" id="main-nav">
+          <a href="../Home/index.html" class="nav-menu__link">Home</a>
+          <a href="../Shop/shop.html" class="nav-menu__link">Shop</a>
+          <a href="../About/about.html" class="nav-menu__link">About</a>
+          <a href="../Contact/contact.html" class="nav-menu__link">Contact</a>
+
+          <div
+            class="site-header__actions header-actions header-actions--mobile"
+          >
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Account"
+            >
+              <img src="../Home/images/account-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Search"
+            >
+              <img src="../Home/images/search-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Wishlist"
+            >
+              <img src="../Home/images/heart-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Cart"
+            >
+              <img src="../Home/images/cart-icon.svg" alt="" />
+            </button>
+          </div>
+        </nav>
+
+        <div
+          class="site-header__actions header-actions header-actions--desktop"
+        >
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Account"
+          >
+            <img src="../Home/images/account-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Search"
+          >
+            <img src="../Home/images/search-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Wishlist"
+          >
+            <img src="../Home/images/heart-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Cart"
+          >
+            <img src="../Home/images/cart-icon.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="page-hero">
+        <img
+          src="../Home/images/rectangle 1.png"
+          alt="Shop banner background"
+          class="page-hero__bg"
+        />
+        <div class="page-hero__content">
+          <img src="./images/logo.svg" alt="" class="page-hero__logo" />
+          <h1 class="page-hero__title">Product Comparison</h1>
+          <nav class="breadcrumb" aria-label="breadcrumb">
+            <a href="../Home/index.html" class="breadcrumb__link">Home</a>
+            <img
+              src="../Home/images/arrow-shop.svg"
+              alt=""
+              class="breadcrumb__sep"
+              aria-hidden="true"
+            />
+            <span class="breadcrumb__current">Comparison</span>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Comparison Section -->
+      <section class="comparison-section">
+        <div class="comparison-section__inner u-container">
+          <div class="comparison-goto">
+            <p class="comparison-goto__label">
+              Go to Product page for more Products
+            </p>
+            <a href="../Shop/shop.html" class="comparison-goto__link"
+              >View More</a
+            >
+          </div>
+
+          <!-- Product Column 1: Asgaard Sofa -->
+          <div class="comparison-product" id="compProduct1">
+            <div class="comparison-product__card">
+              <img
+                src="./images/sofa-set-preview-0.png"
+                alt="Asgaard Sofa"
+                class="comparison-product__img"
+              />
+              <h3 class="comparison-product__name">Asgaard Sofa</h3>
+              <p class="comparison-product__price">Rs. 250,000.00</p>
+              <div class="comparison-product__rating">
+                <img src="./images/star-filled.svg" alt="" />
+                <img src="./images/star-filled.svg" alt="" />
+                <img src="./images/star-filled.svg" alt="" />
+                <img src="./images/star-filled.svg" alt="" />
+                <img src="./images/star-half.svg" alt="" />
+                <span class="comparison-product__rating-count"
+                  >4.7 &nbsp; | &nbsp; 204 Review</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Column 2: Outdoor Sofa Set -->
+          <div class="comparison-product" id="compProduct2">
+            <div class="comparison-product__card">
+              <img
+                src="./images/sofa-set-preview-2.png"
+                alt="Outdoor Sofa Set"
+                class="comparison-product__img"
+              />
+              <h3 class="comparison-product__name">Outdoor Sofa Set</h3>
+              <p class="comparison-product__price">Rs. 224,000.00</p>
+              <div class="comparison-product__rating">
+                <img src="./images/star-filled.svg" alt="" />
+                <img src="./images/star-filled.svg" alt="" />
+                <img src="./images/star-filled.svg" alt="" />
+                <img src="./images/star-filled.svg" alt="" />
+                <img src="./images/star-half.svg" alt="" />
+                <span class="comparison-product__rating-count"
+                  >4.2 &nbsp; | &nbsp; 145 Review</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Add A Product -->
+          <div class="comparison-add" id="compAdd">
+            <p class="comparison-add__label">Add A Product</p>
+            <div class="comparison-add__dropdown-wrap">
+              <button
+                class="comparison-add__trigger"
+                type="button"
+                id="addProductTrigger"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+              >
+                <span>Choose a Product</span>
+
+                <img
+                  src="./images/arrow-down.svg"
+                  alt=""
+                  class="comparison-add__arrow"
+                />
+              </button>
+              <ul
+                class="comparison-add__dropdown"
+                id="addProductDropdown"
+                role="listbox"
+                aria-label="Choose a product"
+              >
+                <li
+                  class="comparison-add__item"
+                  role="option"
+                  tabindex="0"
+                  data-product="1"
+                >
+                  <img src="../Home/images/product-1.png" alt="Syltherine" />
+                  <div>
+                    <span class="comparison-add__item-name">Syltherine</span>
+                    <span class="comparison-add__item-sub">Rp 2.500.000</span>
+                  </div>
+                </li>
+                <li
+                  class="comparison-add__item"
+                  role="option"
+                  tabindex="0"
+                  data-product="2"
+                >
+                  <img src="../Home/images/product-2.png" alt="Leviosa" />
+                  <div>
+                    <span class="comparison-add__item-name">Leviosa</span>
+                    <span class="comparison-add__item-sub">Rp 2.500.000</span>
+                  </div>
+                </li>
+                <li
+                  class="comparison-add__item"
+                  role="option"
+                  tabindex="0"
+                  data-product="3"
+                >
+                  <img src="../Home/images/product-3.png" alt="Lolito" />
+                  <div>
+                    <span class="comparison-add__item-name">Lolito</span>
+                    <span class="comparison-add__item-sub">Rp 7.000.000</span>
+                  </div>
+                </li>
+                <li
+                  class="comparison-add__item"
+                  role="option"
+                  tabindex="0"
+                  data-product="4"
+                >
+                  <img src="../Home/images/product-4.png" alt="Respira" />
+                  <div>
+                    <span class="comparison-add__item-name">Respira</span>
+                    <span class="comparison-add__item-sub">Rp 500.000</span>
+                  </div>
+                </li>
+                <li
+                  class="comparison-add__item"
+                  role="option"
+                  tabindex="0"
+                  data-product="5"
+                >
+                  <img src="../Home/images/product-5.png" alt="Grifo" />
+                  <div>
+                    <span class="comparison-add__item-name">Grifo</span>
+                    <span class="comparison-add__item-sub">Rp 1.500.000</span>
+                  </div>
+                </li>
+                <li
+                  class="comparison-add__item"
+                  role="option"
+                  tabindex="0"
+                  data-product="6"
+                >
+                  <img src="../Home/images/product-6.png" alt="Muggo" />
+                  <div>
+                    <span class="comparison-add__item-name">Muggo</span>
+                    <span class="comparison-add__item-sub">Rp 150.000</span>
+                  </div>
+                </li>
+                <li
+                  class="comparison-add__item"
+                  role="option"
+                  tabindex="0"
+                  data-product="7"
+                >
+                  <img src="../Home/images/product-7.png" alt="Pingky" />
+                  <div>
+                    <span class="comparison-add__item-name">Pingky</span>
+                    <span class="comparison-add__item-sub">Rp 7.000.000</span>
+                  </div>
+                </li>
+                <li
+                  class="comparison-add__item"
+                  role="option"
+                  tabindex="0"
+                  data-product="8"
+                >
+                  <img src="../Home/images/product-8.png" alt="Potty" />
+                  <div>
+                    <span class="comparison-add__item-name">Potty</span>
+                    <span class="comparison-add__item-sub">Rp 2.500.000</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparison Table -->
+      <div class="comparison-table-wrap u-container">
+        <table class="comparison-table" role="table">
+          <colgroup>
+            <col />
+            <col />
+            <col />
+            <col />
+          </colgroup>
+
+          <!-- General -->
+          <tbody class="comparison-tbody">
+            <tr class="comparison-section-header">
+              <td colspan="4"><h4>General</h4></td>
+            </tr>
+            <tr>
+              <th scope="row">Sales Package</th>
+              <td>1 sectional sofa</td>
+              <td>1 Three Seater, 2 Single Seater</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Model Number</th>
+              <td>TFCBLIGRBL6SRHS</td>
+              <td>DTUBLIGRBL568</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Secondary Material</th>
+              <td>Solid Wood</td>
+              <td>Solid Wood</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Configuration</th>
+              <td>L-shaped</td>
+              <td>L-shaped</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Upholstery Material</th>
+              <td>Fabric + Cotton</td>
+              <td>Fabric + Cotton</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Upholstery Color</th>
+              <td>Bright Grey &amp; Lion</td>
+              <td>Bright Grey &amp; Lion</td>
+              <td></td>
+            </tr>
+          </tbody>
+
+          <!-- Product -->
+          <tbody class="comparison-tbody">
+            <tr class="comparison-section-header">
+              <td colspan="4"><h4>Product</h4></td>
+            </tr>
+            <tr>
+              <th scope="row">Filling Material</th>
+              <td>Foam</td>
+              <td>Matte</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Finish Type</th>
+              <td>Bright Grey &amp; Lion</td>
+              <td>Bright Grey &amp; Lion</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Adjustable Headrest</th>
+              <td>No</td>
+              <td>Yes</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Maximum Load Capacity</th>
+              <td>280 KG</td>
+              <td>300 KG</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Origin of Manufacture</th>
+              <td>India</td>
+              <td>India</td>
+              <td></td>
+            </tr>
+          </tbody>
+
+          <!-- Dimensions -->
+          <tbody class="comparison-tbody">
+            <tr class="comparison-section-header">
+              <td colspan="4"><h4>Dimensions</h4></td>
+            </tr>
+            <tr>
+              <th scope="row">Width</th>
+              <td>265.32 cm</td>
+              <td>265.32 cm</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Height</th>
+              <td>76 cm</td>
+              <td>76 cm</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Depth</th>
+              <td>167.76 cm</td>
+              <td>167.76 cm</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Weight</th>
+              <td>45 KG</td>
+              <td>65 KG</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Seat Height</th>
+              <td>41.52 cm</td>
+              <td>41.52 cm</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Leg Height</th>
+              <td>5.46 cm</td>
+              <td>5.46 cm</td>
+              <td></td>
+            </tr>
+          </tbody>
+
+          <!-- Warranty -->
+          <tbody class="comparison-tbody">
+            <tr class="comparison-section-header">
+              <td colspan="4"><h4>Warranty</h4></td>
+            </tr>
+            <tr>
+              <th scope="row">Warranty Summary</th>
+              <td>1 Year Manufacturing Warranty</td>
+              <td>1.2 Year Manufacturing Warranty</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Warranty Service Type</th>
+              <td>
+                For Warranty Claims or Any Product Related Issues Please Email
+                at operations@trevifurniture.com
+              </td>
+              <td>
+                For Warranty Claims or Any Product Related Issues Please Email
+                at support@xyz.com
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Covered in Warranty</th>
+              <td>Warranty Against Manufacturing Defect</td>
+              <td>
+                Warranty of the product is limited to manufacturing defects
+                only.
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Not Covered in Warranty</th>
+              <td>
+                The Warranty Does Not Cover Damages Due To Usage Of The Product
+                Beyond Its Intended Use And Wear &amp; Tear In The Natural
+                Course Of Product Usage.
+              </td>
+              <td>
+                The Warranty Does Not Cover Damages Due To Usage Of The Product
+                Beyond Its Intended Use And Wear &amp; Tear In The Natural
+                Course Of Product Usage.
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Domestic Warranty</th>
+              <td>1 Year</td>
+              <td>3 Months</td>
+              <td></td>
+            </tr>
+
+            <!-- Add to Cart row -->
+            <tr class="comparison-atc-row">
+              <td></td>
+              <td>
+                <a
+                  href="../Single_Product/singleproduct.html"
+                  class="comparison-atc-btn"
+                  id="addToCart1"
+                  >Add To Cart</a
+                >
+              </td>
+              <td>
+                <a
+                  href="../Single_Product/singleproduct.html"
+                  class="comparison-atc-btn"
+                  id="addToCart2"
+                  >Add To Cart</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Trust Strip -->
+      <section class="trust-strip">
+        <div class="trust-strip__inner u-container">
+          <div class="trust-item">
+            <img
+              src="../Home/images/trophy.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>High Quality</strong>
+              <span>crafted from top materials</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img
+              src="../Home/images/guarantee.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>Warranty Protection</strong>
+              <span>Over 2 years</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img
+              src="../Home/images/shipping.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>Free Shipping</strong>
+              <span>Order over 150 $</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img
+              src="../Home/images/customer-support.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>24 / 7 Support</strong>
+              <span>Dedicated support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer__top u-container">
+        <div class="site-footer__brand-block">
+          <h3 class="site-footer__brand">Furniro.</h3>
+          <p class="site-footer__address">
+            400 University Drive Suite 200 Coral Gables, FL 33134 USA
+          </p>
+        </div>
+
+        <div class="site-footer__group">
+          <h4 class="site-footer__group-title">Links</h4>
+          <a href="../Home/index.html" class="site-footer__link">Home</a>
+          <a href="../Shop/shop.html" class="site-footer__link">Shop</a>
+          <a href="../About/about.html" class="site-footer__link">About</a>
+          <a href="../Contact/contact.html" class="site-footer__link"
+            >Contact</a
+          >
+        </div>
+
+        <div class="site-footer__group">
+          <h4 class="site-footer__group-title">Help</h4>
+          <a href="#" class="site-footer__link">Payment Options</a>
+          <a href="#" class="site-footer__link">Returns</a>
+          <a href="#" class="site-footer__link">Privacy Policies</a>
+        </div>
+
+        <div class="site-footer__group site-footer__group--newsletter">
+          <h4 class="site-footer__group-title">Newsletter</h4>
+          <form class="site-footer__newsletter" action="#" method="post">
+            <input
+              class="site-footer__input"
+              type="email"
+              placeholder="Enter Your Email Address"
+            />
+            <button class="site-footer__subscribe" type="submit">
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom u-container">
+        <p class="site-footer__copyright">2023 furino. All rights reverved</p>
+      </div>
+    </footer>
+
+    <script src="./js/comparison.js"></script>
+  </body>
+</html>

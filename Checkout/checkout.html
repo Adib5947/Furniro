@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout – Furniro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/checkout.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="site-header__inner u-container">
+        <a href="../Home/index.html" class="site-header__brand brand-mark">
+          <img
+            src="./images/logo.svg"
+            alt="Furniro logo"
+            class="brand-mark__logo"
+          />
+          <span class="brand-mark__name">Furniro</span>
+        </a>
+
+        <button
+          class="nav-hamburger"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="nav-hamburger__bar"></span>
+          <span class="nav-hamburger__bar"></span>
+          <span class="nav-hamburger__bar"></span>
+        </button>
+
+        <nav class="site-header__nav nav-menu" id="main-nav">
+          <a href="../Home/index.html" class="nav-menu__link">Home</a>
+          <a href="../Shop/shop.html" class="nav-menu__link">Shop</a>
+          <a href="../About/about.html" class="nav-menu__link">About</a>
+          <a href="../Contact/contact.html" class="nav-menu__link">Contact</a>
+
+          <div
+            class="site-header__actions header-actions header-actions--mobile"
+          >
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Account"
+            >
+              <img src="./images/account-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Search"
+            >
+              <img src="./images/search-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Wishlist"
+            >
+              <img src="./images/heart-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Cart"
+            >
+              <img src="./images/cart-icon.svg" alt="" />
+            </button>
+          </div>
+        </nav>
+
+        <div
+          class="site-header__actions header-actions header-actions--desktop"
+        >
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Account"
+          >
+            <img src="./images/account-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Search"
+          >
+            <img src="./images/search-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Wishlist"
+          >
+            <img src="./images/heart-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Cart"
+          >
+            <img src="./images/cart-icon.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Banner -->
+      <section class="page-hero">
+        <img
+          src="./images/rectangle 1.png"
+          alt="Checkout banner background"
+          class="page-hero__bg"
+        />
+        <div class="page-hero__content">
+          <img src="./images/logo.svg" alt="" class="page-hero__logo" />
+          <h1 class="page-hero__title">Checkout</h1>
+          <nav class="breadcrumb" aria-label="breadcrumb">
+            <a href="../Cart/cart.html" class="breadcrumb__link">Cart</a>
+            <img
+              src="./images/arrow-shop.svg"
+              alt=""
+              class="breadcrumb__sep"
+              aria-hidden="true"
+            />
+            <span class="breadcrumb__current">Checkout</span>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Checkout Section -->
+      <section class="checkout-section">
+        <div class="checkout-section__inner u-container">
+          <!-- Billing Details Form -->
+          <div class="billing-details">
+            <h2 class="billing-details__title">Billing details</h2>
+
+            <div class="billing-form">
+              <!-- Name Row -->
+              <div class="billing-form__row billing-form__row--split">
+                <div class="billing-form__field">
+                  <label class="billing-form__label" for="firstName"
+                    >First Name</label
+                  >
+                  <input
+                    class="billing-form__input"
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    autocomplete="given-name"
+                  />
+                </div>
+                <div class="billing-form__field">
+                  <label class="billing-form__label" for="lastName"
+                    >Last Name</label
+                  >
+                  <input
+                    class="billing-form__input"
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    autocomplete="family-name"
+                  />
+                </div>
+              </div>
+
+              <!-- Company Name -->
+              <div class="billing-form__field">
+                <label class="billing-form__label" for="companyName"
+                  >Company Name (Optional)</label
+                >
+                <input
+                  class="billing-form__input"
+                  type="text"
+                  id="companyName"
+                  name="companyName"
+                  autocomplete="organization"
+                />
+              </div>
+
+              <!-- Country / Region -->
+              <div class="billing-form__field">
+                <label class="billing-form__label" for="country"
+                  >Country / Region</label
+                >
+                <div class="billing-form__select-wrap">
+                  <select
+                    class="billing-form__select"
+                    id="country"
+                    name="country"
+                    autocomplete="country"
+                  >
+                    <option value="LK" selected>Sri Lanka</option>
+                    <option value="US">United States</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="AU">Australia</option>
+                    <option value="CA">Canada</option>
+                    <option value="IN">India</option>
+                    <option value="BD">Bangladesh</option>
+                    <option value="SG">Singapore</option>
+                    <option value="MY">Malaysia</option>
+                    <option value="AE">United Arab Emirates</option>
+                  </select>
+                  <img
+                    src="./images/arrow-down.svg"
+                    alt=""
+                    class="billing-form__select-arrow"
+                    aria-hidden="true"
+                  />
+                </div>
+              </div>
+
+              <!-- Street Address -->
+              <div class="billing-form__field">
+                <label class="billing-form__label" for="streetAddress"
+                  >Street address</label
+                >
+                <input
+                  class="billing-form__input"
+                  type="text"
+                  id="streetAddress"
+                  name="streetAddress"
+                  autocomplete="street-address"
+                />
+              </div>
+
+              <!-- Town / City -->
+              <div class="billing-form__field">
+                <label class="billing-form__label" for="town"
+                  >Town / City</label
+                >
+                <input
+                  class="billing-form__input"
+                  type="text"
+                  id="town"
+                  name="town"
+                  autocomplete="address-level2"
+                />
+              </div>
+
+              <!-- Province -->
+              <div class="billing-form__field">
+                <label class="billing-form__label" for="province"
+                  >Province</label
+                >
+                <div class="billing-form__select-wrap">
+                  <select
+                    class="billing-form__select"
+                    id="province"
+                    name="province"
+                    autocomplete="address-level1"
+                  >
+                    <option value="western" selected>Western Province</option>
+                    <option value="central">Central Province</option>
+                    <option value="southern">Southern Province</option>
+                    <option value="northern">Northern Province</option>
+                    <option value="eastern">Eastern Province</option>
+                    <option value="north-western">
+                      North Western Province
+                    </option>
+                    <option value="north-central">
+                      North Central Province
+                    </option>
+                    <option value="uva">Uva Province</option>
+                    <option value="sabaragamuwa">Sabaragamuwa Province</option>
+                  </select>
+                  <img
+                    src="./images/arrow-down.svg"
+                    alt=""
+                    class="billing-form__select-arrow"
+                    aria-hidden="true"
+                  />
+                </div>
+              </div>
+
+              <!-- ZIP Code -->
+              <div class="billing-form__field">
+                <label class="billing-form__label" for="zipCode"
+                  >ZIP code</label
+                >
+                <input
+                  class="billing-form__input"
+                  type="text"
+                  id="zipCode"
+                  name="zipCode"
+                  autocomplete="postal-code"
+                />
+              </div>
+
+              <!-- Phone -->
+              <div class="billing-form__field">
+                <label class="billing-form__label" for="phone">Phone</label>
+                <input
+                  class="billing-form__input"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  autocomplete="tel"
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="billing-form__field">
+                <label class="billing-form__label" for="email"
+                  >Email address</label
+                >
+                <input
+                  class="billing-form__input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                />
+              </div>
+
+              <!-- Additional Information -->
+              <div class="billing-form__field">
+                <textarea
+                  class="billing-form__textarea"
+                  id="additionalInfo"
+                  name="additionalInfo"
+                  placeholder="Additional information"
+                  rows="4"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Summary -->
+          <aside class="order-summary">
+            <!-- Order Table -->
+            <div class="order-table">
+              <div class="order-table__head">
+                <span class="order-table__head-product">Product</span>
+                <span class="order-table__head-subtotal">Subtotal</span>
+              </div>
+
+              <div class="order-table__body" id="orderItems"></div>
+
+              <div class="order-table__row order-table__row--subtotal">
+                <span class="order-table__label">Subtotal</span>
+                <span
+                  class="order-table__value order-table__value--muted"
+                  id="orderSubtotal"
+                  >Rs. 0.00</span
+                >
+              </div>
+
+              <div class="order-table__row order-table__row--total">
+                <span class="order-table__label">Total</span>
+                <span
+                  class="order-table__value order-table__value--gold"
+                  id="orderTotal"
+                  >Rs. 0.00</span
+                >
+              </div>
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="payment-methods">
+              <div class="payment-method" id="paymentDirectBank">
+                <label class="payment-method__label">
+                  <span class="payment-method__radio-wrap">
+                    <input
+                      class="payment-method__radio"
+                      type="radio"
+                      name="payment"
+                      value="direct-bank"
+                      id="payDirectBank"
+                      checked
+                    />
+                    <img
+                      src="./images/black_dot.svg"
+                      alt=""
+                      class="payment-method__radio-dot"
+                    />
+                  </span>
+                  <span class="payment-method__name">Direct Bank Transfer</span>
+                </label>
+                <p class="payment-method__desc" id="directBankDesc">
+                  Make your payment directly into our bank account. Please use
+                  your Order ID as the payment reference. Your order will not be
+                  shipped until the funds have cleared in our account.
+                </p>
+              </div>
+
+              <div class="payment-method">
+                <label class="payment-method__label">
+                  <span class="payment-method__radio-wrap">
+                    <input
+                      class="payment-method__radio"
+                      type="radio"
+                      name="payment"
+                      value="direct-bank-alt"
+                      id="payDirectBankAlt"
+                    />
+                    <img
+                      src="./images/white_dot.svg"
+                      alt=""
+                      class="payment-method__radio-dot"
+                    />
+                  </span>
+                  <span class="payment-method__name">Direct Bank Transfer</span>
+                </label>
+              </div>
+
+              <div class="payment-method">
+                <label class="payment-method__label">
+                  <span class="payment-method__radio-wrap">
+                    <input
+                      class="payment-method__radio"
+                      type="radio"
+                      name="payment"
+                      value="cash-on-delivery"
+                      id="payCashOnDelivery"
+                    />
+                    <img
+                      src="./images/white_dot.svg"
+                      alt=""
+                      class="payment-method__radio-dot"
+                    />
+                  </span>
+                  <span class="payment-method__name">Cash On Delivery</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Privacy Note -->
+            <p class="privacy-note">
+              Your personal data will be used to support your experience
+              throughout this website, to manage access to your account, and for
+              other purposes described in our
+              <a href="#" class="privacy-note__link">privacy policy.</a>
+            </p>
+
+            <!-- Place Order Button -->
+            <div class="place-order-wrapper">
+              <button class="place-order-btn" id="placeOrderBtn" type="button">
+                Place order
+              </button>
+            </div>
+
+            <!-- Order Success Message -->
+            <div class="order-success" id="orderSuccess" hidden>
+              <p>✓ Your order has been placed successfully!</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Trust Strip -->
+      <section class="trust-strip">
+        <div class="trust-strip__inner u-container">
+          <div class="trust-item">
+            <img src="./images/trophy.svg" alt="" class="trust-item__icon" />
+            <div class="trust-item__text">
+              <strong>High Quality</strong>
+              <span>crafted from top materials</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img src="./images/guarantee.svg" alt="" class="trust-item__icon" />
+            <div class="trust-item__text">
+              <strong>Warranty Protection</strong>
+              <span>Over 2 years</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img src="./images/shipping.svg" alt="" class="trust-item__icon" />
+            <div class="trust-item__text">
+              <strong>Free Shipping</strong>
+              <span>Order over 150 $</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img
+              src="./images/customer-support.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>24 / 7 Support</strong>
+              <span>Dedicated support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer__top u-container">
+        <div class="site-footer__brand-block">
+          <h3 class="site-footer__brand">Furniro.</h3>
+          <p class="site-footer__address">
+            400 University Drive Suite 200 Coral Gables, FL 33134 USA
+          </p>
+        </div>
+
+        <div class="site-footer__group">
+          <h4 class="site-footer__group-title">Links</h4>
+          <a href="../Home/index.html" class="site-footer__link">Home</a>
+          <a href="../Shop/shop.html" class="site-footer__link">Shop</a>
+          <a href="../About/about.html" class="site-footer__link">About</a>
+          <a href="../Contact/contact.html" class="site-footer__link"
+            >Contact</a
+          >
+        </div>
+
+        <div class="site-footer__group">
+          <h4 class="site-footer__group-title">Help</h4>
+          <a href="#" class="site-footer__link">Payment Options</a>
+          <a href="#" class="site-footer__link">Returns</a>
+          <a href="#" class="site-footer__link">Privacy Policies</a>
+        </div>
+
+        <div class="site-footer__group site-footer__group--newsletter">
+          <h4 class="site-footer__group-title">Newsletter</h4>
+          <form class="site-footer__newsletter" action="#" method="post">
+            <input
+              class="site-footer__input"
+              type="email"
+              placeholder="Enter Your Email Address"
+            />
+            <button class="site-footer__subscribe" type="submit">
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom u-container">
+        <p class="site-footer__copyright">2023 furino. All rights reverved</p>
+      </div>
+    </footer>
+
+    <script src="./js/checkout.js"></script>
+  </body>
+</html>

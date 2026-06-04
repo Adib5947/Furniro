@@ -1,6 +1,6 @@
 "use strict";
 
-/* Hamburger Mobile Nav */
+// Hamburger Mobile Nav
 
 const hamburger = document.querySelector(".nav-hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -21,7 +21,7 @@ if (hamburger && navMenu) {
   });
 }
 
-/* Active nav link */
+// Active nav link
 
 const navLinks = document.querySelectorAll(".nav-menu__link");
 
@@ -32,37 +32,7 @@ navLinks.forEach((link) => {
   });
 });
 
-/* Product card hover tilt */
-
-function initCardTilt() {
-  document.querySelectorAll(".product-card").forEach((card) => {
-    card.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-
-      const rotateX = ((y - centerY) / centerY) * -4;
-      const rotateY = ((x - centerX) / centerX) * 4;
-
-      card.style.transform = `
-        perspective(1000px)
-        rotateX(${rotateX}deg)
-        rotateY(${rotateY}deg)
-        translateY(-8px)
-      `;
-    });
-
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "translateY(0)";
-    });
-  });
-}
-
-initCardTilt();
-
-/* Filter Drawer toggle */
+// Filter Drawer toggle
 
 const filterToggleBtn = document.getElementById("filterToggleBtn");
 const filterDrawer = document.getElementById("filterDrawer");
@@ -75,7 +45,7 @@ if (filterToggleBtn && filterDrawer) {
   });
 }
 
-/* Price Range live display */
+// Price Range
 
 const priceRange = document.getElementById("priceRange");
 const priceRangeVal = document.getElementById("priceRangeVal");
@@ -90,7 +60,7 @@ if (priceRange && priceRangeVal) {
   });
 }
 
-/* View Toggle (Grid / List) */
+// View Toggle (Grid / List)
 
 const viewBtns = document.querySelectorAll(".toolbar-view");
 const productsGrid = document.getElementById("productsGrid");
@@ -114,7 +84,7 @@ viewBtns.forEach((btn) => {
   });
 });
 
-/* Show Count selector */
+// Show Count selector
 
 const showCountEl = document.getElementById("showCount");
 const rangeEndEl = document.getElementById("rangeEnd");
@@ -139,7 +109,7 @@ if (showCountEl) {
 
 updateResultsLabel(16, 1);
 
-/* Sort selector */
+// Sort selector
 
 const sortByEl = document.getElementById("sortBy");
 
@@ -155,7 +125,7 @@ if (sortByEl) {
   });
 }
 
-/* Pagination */
+// Pagination
 
 let currentPage = 1;
 
@@ -200,7 +170,7 @@ paginationBtns.forEach((btn) => {
   });
 });
 
-/* Filter Apply button */
+// Filter Apply button
 
 const filterApplyBtn = document.querySelector(".filter-apply-btn");
 
@@ -222,7 +192,7 @@ if (filterApplyBtn && filterDrawer) {
   });
 }
 
-/* Smooth scroll */
+// Smooth scroll
 
 document.querySelectorAll('a[href="#"]').forEach((anchor) => {
   anchor.addEventListener("click", (e) => {
@@ -231,7 +201,7 @@ document.querySelectorAll('a[href="#"]').forEach((anchor) => {
   });
 });
 
-/* Footer brand */
+// Footer brand
 
 const footerBrand = document.querySelector(".site-footer__brand");
 
@@ -242,7 +212,7 @@ if (footerBrand) {
   });
 }
 
-/* Scroll-reveal animation */
+// Scroll-reveal animation
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(

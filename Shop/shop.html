@@ -42,8 +42,8 @@
           <a href="shop.html" class="nav-menu__link nav-menu__link--active"
             >Shop</a
           >
-          <a href="#" class="nav-menu__link">About</a>
-          <a href="#" class="nav-menu__link">Contact</a>
+          <a href="../About/about.html" class="nav-menu__link">About</a>
+          <a href="../Contact/contact.html" class="nav-menu__link">Contact</a>
 
           <div
             class="site-header__actions header-actions header-actions--mobile"
@@ -123,6 +123,7 @@
           class="page-hero__bg"
         />
         <div class="page-hero__content">
+          <img src="./images/logo.svg" alt="" class="page-hero__logo" />
           <h1 class="page-hero__title">Shop</h1>
           <nav class="breadcrumb" aria-label="breadcrumb">
             <a href="../Home/index.html" class="breadcrumb__link">Home</a>
@@ -140,7 +141,7 @@
       <!-- Filters and Toolbar -->
       <section class="shop-toolbar">
         <div class="shop-toolbar__inner u-container">
-          <!-- Left: filter + view toggles -->
+          <!-- Left -->
           <div class="shop-toolbar__left">
             <button
               class="toolbar-btn toolbar-btn--filter"
@@ -182,7 +183,7 @@
             </p>
           </div>
 
-          <!-- Right: Show count + Sort -->
+          <!-- Right -->
           <div class="shop-toolbar__right">
             <label class="toolbar-label" for="showCount">Show</label>
             <div class="toolbar-select-wrap">
@@ -275,46 +276,58 @@
         <div class="products__grid" id="productsGrid">
           <!-- Row 1 -->
           <article class="product-card">
-            <div class="product-card__media">
-              <img
-                src="../Home/images/product-1.png"
-                alt="Syltherine chair"
-                loading="lazy"
-              />
-              <span class="product-card__badge product-card__badge--sale"
-                >-30%</span
-              >
-              <div class="product-card__overlay">
-                <button class="product-card__overlay-cta" type="button">
-                  Add to cart
-                </button>
-                <div class="product-card__overlay-actions">
-                  <span
-                    ><img src="../Home/images/share.svg" alt="" />Share</span
-                  >
-                  <span
-                    ><img
-                      src="../Home/images/compare.svg"
-                      alt=""
-                    />Compare</span
-                  >
-                  <span
-                    ><img
-                      src="../Home/images/heart-icon-sm.svg"
-                      alt=""
-                    />Like</span
-                  >
+            <a
+              href="../Single_Product/singleproduct.html"
+              class="product-card__link"
+            >
+              <div class="product-card__media">
+                <img
+                  src="../Home/images/asgaard_sofa.png"
+                  alt="Asgaard Sofa"
+                  loading="lazy"
+                />
+
+                <span class="product-card__badge product-card__badge--sale">
+                  -30%
+                </span>
+
+                <div class="product-card__overlay">
+                  <button class="product-card__overlay-cta" type="button">
+                    Add to cart
+                  </button>
+
+                  <div class="product-card__overlay-actions">
+                    <span>
+                      <img src="../Home/images/share.svg" alt="" />
+                      Share
+                    </span>
+
+                    <span>
+                      <img src="../Home/images/compare.svg" alt="" />
+                      Compare
+                    </span>
+
+                    <span>
+                      <img src="../Home/images/heart-icon-sm.svg" alt="" />
+                      Like
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="product-card__body">
-              <h3 class="product-card__title">Syltherine</h3>
-              <p class="product-card__subtitle">Stylish cafe chair</p>
-              <div class="product-card__price-row">
-                <span class="product-card__price">Rp 2.500.000</span>
-                <span class="product-card__price-old">Rp 3.500.000</span>
+
+              <div class="product-card__body">
+                <h3 class="product-card__title">Asgaard Sofa</h3>
+                <p class="product-card__subtitle">Stylish sofa</p>
+                <p class="product-card__details">
+                  Perfect for cozy cafés and compact spaces.
+                </p>
+
+                <div class="product-card__price-row">
+                  <span class="product-card__price">Rp 2.500.000</span>
+                  <span class="product-card__price-old">Rp 3.500.000</span>
+                </div>
               </div>
-            </div>
+            </a>
           </article>
 
           <article class="product-card">
@@ -350,6 +363,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Leviosa</h3>
               <p class="product-card__subtitle">Stylish cafe chair</p>
+              <p class="product-card__details">
+                Smooth curves with minimalist modern styling.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 2.500.000</span>
               </div>
@@ -392,6 +408,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Lolito</h3>
               <p class="product-card__subtitle">Luxury big sofa</p>
+              <p class="product-card__details">
+                Deep cushioning for luxurious daily comfort.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 7.000.000</span>
                 <span class="product-card__price-old">Rp 14.000.000</span>
@@ -435,6 +454,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Respira</h3>
               <p class="product-card__subtitle">Outdoor bar table and stool</p>
+              <p class="product-card__details">
+                Weather-friendly design for outdoor relaxation.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 500.000</span>
               </div>
@@ -475,6 +497,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Grifo</h3>
               <p class="product-card__subtitle">Night lamp</p>
+              <p class="product-card__details">
+                Soft ambient lighting for peaceful nights.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 1.500.000</span>
               </div>
@@ -517,6 +542,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Muggo</h3>
               <p class="product-card__subtitle">Small mug</p>
+              <p class="product-card__details">
+                Compact ceramic mug with modern aesthetics.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 150.000</span>
               </div>
@@ -559,6 +587,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Pingky</h3>
               <p class="product-card__subtitle">Cute bed set</p>
+              <p class="product-card__details">
+                Elegant bedroom setup with premium comfort.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 7.000.000</span>
                 <span class="product-card__price-old">Rp 14.000.000</span>
@@ -602,6 +633,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Potty</h3>
               <p class="product-card__subtitle">Minimalist flower pot</p>
+              <p class="product-card__details">
+                Decorative planter for clean modern interiors.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 2.500.000</span>
                 <span class="product-card__price-old">Rp 3.500.000</span>
@@ -646,6 +680,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Syltherine</h3>
               <p class="product-card__subtitle">Stylish cafe chair</p>
+              <p class="product-card__details">
+                Perfect for cozy cafés and compact spaces.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 2.500.000</span>
                 <span class="product-card__price-old">Rp 3.500.000</span>
@@ -686,6 +723,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Leviosa</h3>
               <p class="product-card__subtitle">Stylish cafe chair</p>
+              <p class="product-card__details">
+                Smooth curves with minimalist modern styling.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 2.500.000</span>
               </div>
@@ -728,6 +768,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Lolito</h3>
               <p class="product-card__subtitle">Luxury big sofa</p>
+              <p class="product-card__details">
+                Deep cushioning for luxurious daily comfort.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 7.000.000</span>
                 <span class="product-card__price-old">Rp 14.000.000</span>
@@ -771,6 +814,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Respira</h3>
               <p class="product-card__subtitle">Outdoor bar table and stool</p>
+              <p class="product-card__details">
+                Weather-friendly design for outdoor relaxation.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 500.000</span>
               </div>
@@ -811,6 +857,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Grifo</h3>
               <p class="product-card__subtitle">Night lamp</p>
+              <p class="product-card__details">
+                Soft ambient lighting for peaceful nights.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 1.500.000</span>
               </div>
@@ -853,6 +902,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Muggo</h3>
               <p class="product-card__subtitle">Small mug</p>
+              <p class="product-card__details">
+                Compact ceramic mug with modern aesthetics.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 150.000</span>
               </div>
@@ -895,6 +947,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Pingky</h3>
               <p class="product-card__subtitle">Cute bed set</p>
+              <p class="product-card__details">
+                Elegant bedroom setup with premium comfort.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 7.000.000</span>
                 <span class="product-card__price-old">Rp 14.000.000</span>
@@ -938,6 +993,9 @@
             <div class="product-card__body">
               <h3 class="product-card__title">Potty</h3>
               <p class="product-card__subtitle">Minimalist flower pot</p>
+              <p class="product-card__details">
+                Decorative planter for clean modern interiors.
+              </p>
               <div class="product-card__price-row">
                 <span class="product-card__price">Rp 2.500.000</span>
                 <span class="product-card__price-old">Rp 3.500.000</span>
@@ -1031,8 +1089,10 @@
           <h4 class="site-footer__group-title">Links</h4>
           <a href="../Home/index.html" class="site-footer__link">Home</a>
           <a href="shop.html" class="site-footer__link">Shop</a>
-          <a href="#" class="site-footer__link">About</a>
-          <a href="#" class="site-footer__link">Contact</a>
+          <a href="../About/about.html" class="site-footer__link">About</a>
+          <a href="../Contact/contact.html" class="site-footer__link"
+            >Contact</a
+          >
         </div>
 
         <div class="site-footer__group">

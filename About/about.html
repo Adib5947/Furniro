@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About – Furniro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/about.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="site-header__inner u-container">
+        <a href="../Home/index.html" class="site-header__brand brand-mark">
+          <img
+            src="./images/logo.svg"
+            alt="Furniro logo"
+            class="brand-mark__logo"
+          />
+          <span class="brand-mark__name">Furniro</span>
+        </a>
+
+        <button
+          class="nav-hamburger"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="nav-hamburger__bar"></span>
+          <span class="nav-hamburger__bar"></span>
+          <span class="nav-hamburger__bar"></span>
+        </button>
+
+        <nav class="site-header__nav nav-menu" id="main-nav">
+          <a href="../Home/index.html" class="nav-menu__link">Home</a>
+          <a href="../Shop/shop.html" class="nav-menu__link">Shop</a>
+          <a
+            href="../About/about.html"
+            class="nav-menu__link nav-menu__link--active"
+            >About</a
+          >
+          <a href="../Contact/contact.html" class="nav-menu__link">Contact</a>
+
+          <div
+            class="site-header__actions header-actions header-actions--mobile"
+          >
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Account"
+            >
+              <img src="./images/account-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Search"
+            >
+              <img src="./images/search-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Wishlist"
+            >
+              <img src="./images/heart-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Cart"
+            >
+              <img src="./images/cart-icon.svg" alt="" />
+            </button>
+          </div>
+        </nav>
+
+        <div
+          class="site-header__actions header-actions header-actions--desktop"
+        >
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Account"
+          >
+            <img src="./images/account-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Search"
+          >
+            <img src="./images/search-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Wishlist"
+          >
+            <img src="./images/heart-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Cart"
+          >
+            <img src="./images/cart-icon.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Banner -->
+      <section class="page-hero">
+        <img
+          src="./images/rectangle 1.png"
+          alt="About banner background"
+          class="page-hero__bg"
+        />
+        <div class="page-hero__content">
+          <img src="./images/logo.svg" alt="" class="page-hero__logo" />
+          <h1 class="page-hero__title">About</h1>
+          <nav class="breadcrumb" aria-label="breadcrumb">
+            <a href="../Home/index.html" class="breadcrumb__link">Home</a>
+            <img
+              src="./images/arrow-shop.svg"
+              alt=""
+              class="breadcrumb__sep"
+              aria-hidden="true"
+            />
+            <span class="breadcrumb__current">About</span>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Our Story Section -->
+      <section class="about-story">
+        <div class="about-story__inner u-container">
+          <div class="about-story__image">
+            <img
+              src="./images/interrior.png"
+              alt="Interior design"
+              class="about-story__img"
+            />
+          </div>
+          <div class="about-story__content">
+            <span class="about-story__label">OUR STORY</span>
+            <h2 class="about-story__title">
+              Crafting Furniture<br />That Feels Like Home
+            </h2>
+            <p class="about-story__text">
+              Furniro was founded with a simple vision: to create furniture that
+              blends comfort, craftsmanship, and timeless design.
+            </p>
+            <p class="about-story__text">
+              Inspired by modern living and natural materials, we design pieces
+              that transform houses into homes.
+            </p>
+            <a href="../Blog/blog.html" class="about-story__btn">View Blogs</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission & Vision Section -->
+      <section class="about-mv">
+        <div class="about-mv__inner u-container">
+          <div class="about-mv__card about-mv__card--mission">
+            <img
+              src="./images/mission.svg"
+              alt="Mission"
+              class="about-mv__icon"
+            />
+            <div class="about-mv__content">
+              <span class="about-mv__label">OUR MISSION</span>
+              <h3 class="about-mv__title">Better Design,<br />Better Living</h3>
+              <p class="about-mv__text">
+                To create high-quality, functional and beautiful furniture that
+                enhances everyday living and brings comfort to every home.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-mv__card about-mv__card--vision">
+            <img
+              src="./images/vision.svg"
+              alt="Vision"
+              class="about-mv__icon"
+            />
+            <div class="about-mv__content">
+              <span class="about-mv__label">OUR VISION</span>
+              <h3 class="about-mv__title">Inspiring Homes<br />Worldwide</h3>
+              <p class="about-mv__text">
+                To become a global leader in furniture design by delivering
+                exceptional quality, innovative designs, and a home experience
+                everyone loves.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Craftsmanship Section -->
+      <section class="about-craft">
+        <div class="about-craft__inner u-container">
+          <div class="about-craft__header">
+            <span class="about-craft__label">OUR CRAFTSMANSHIP</span>
+            <h2 class="about-craft__title">Built With Care. Made To Last.</h2>
+          </div>
+
+          <div class="about-craft__grid">
+            <div class="craft-card">
+              <div class="craft-card__media">
+                <img
+                  src="./images/expert_craftsmanship.png"
+                  alt="Expert Craftsmanship"
+                  class="craft-card__image"
+                />
+              </div>
+              <div class="craft-card__body">
+                <div class="craft-card__number">
+                  <span>01</span>
+                </div>
+                <h3 class="craft-card__title">Expert Craftsmanship</h3>
+                <p class="craft-card__text">
+                  We carefully select premium wood and sustainable materials for
+                  durability and beauty.
+                </p>
+              </div>
+            </div>
+
+            <div class="craft-card">
+              <div class="craft-card__media">
+                <img
+                  src="./images/material_selection.png"
+                  alt="Material Selection"
+                  class="craft-card__image"
+                />
+              </div>
+              <div class="craft-card__body">
+                <div class="craft-card__number">
+                  <span>02</span>
+                </div>
+                <h3 class="craft-card__title">Material Selection</h3>
+                <p class="craft-card__text">
+                  Our skilled artisans combine traditional techniques with
+                  modern technology to build perfection.
+                </p>
+              </div>
+            </div>
+
+            <div class="craft-card">
+              <div class="craft-card__media">
+                <img
+                  src="./images/finished_interior.png"
+                  alt="Finished Interior"
+                  class="craft-card__image"
+                />
+              </div>
+              <div class="craft-card__body">
+                <div class="craft-card__number">
+                  <span>03</span>
+                </div>
+                <h3 class="craft-card__title">Finished Interior</h3>
+                <p class="craft-card__text">
+                  Every piece is thoughtfully dessigned and quality-checked to
+                  bring alegance into your home.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meet Our Team Section -->
+      <section class="about-team">
+        <div class="about-team__inner u-container">
+          <div class="about-team__header">
+            <span class="about-team__label">MEET OUR TEAM</span>
+            <h2 class="about-team__title">The People Behind Furniro</h2>
+          </div>
+
+          <div class="about-team__grid">
+            <div class="team-card">
+              <div class="team-card__media">
+                <img
+                  src="./images/ceo.png"
+                  alt="Adib Ahmed"
+                  class="team-card__image"
+                />
+              </div>
+              <div class="team-card__body">
+                <h3 class="team-card__name">Adib Ahmed</h3>
+                <p class="team-card__role">Founder & CEO</p>
+                <div class="team-card__social">
+                  <a href="#" class="team-card__social-link">
+                    <img src="./images/facebook.svg" alt="Facebook" />
+                  </a>
+                  <a href="#" class="team-card__social-link">
+                    <img src="./images/instagram.svg" alt="Instagram" />
+                  </a>
+                  <a href="#" class="team-card__social-link">
+                    <img src="./images/linkedin.svg" alt="LinkedIn" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-card__media">
+                <img
+                  src="./images/designer.png"
+                  alt="Hena"
+                  class="team-card__image"
+                />
+              </div>
+              <div class="team-card__body">
+                <h3 class="team-card__name">Hena</h3>
+                <p class="team-card__role">Interior Designer</p>
+                <div class="team-card__social">
+                  <a href="#" class="team-card__social-link">
+                    <img src="./images/facebook.svg" alt="Facebook" />
+                  </a>
+                  <a href="#" class="team-card__social-link">
+                    <img src="./images/instagram.svg" alt="Instagram" />
+                  </a>
+                  <a href="#" class="team-card__social-link">
+                    <img src="./images/linkedin.svg" alt="LinkedIn" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-card__media">
+                <img
+                  src="./images/architect.png"
+                  alt="Tahjid Ahmed"
+                  class="team-card__image"
+                />
+              </div>
+              <div class="team-card__body">
+                <h3 class="team-card__name">Tahjid Ahmed</h3>
+                <p class="team-card__role">Product Architect</p>
+                <div class="team-card__social">
+                  <a href="#" class="team-card__social-link">
+                    <img src="./images/facebook.svg" alt="Facebook" />
+                  </a>
+                  <a href="#" class="team-card__social-link">
+                    <img src="./images/instagram.svg" alt="Instagram" />
+                  </a>
+                  <a href="#" class="team-card__social-link">
+                    <img src="./images/linkedin.svg" alt="LinkedIn" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-card__media">
+                <img
+                  src="./images/customer_experience.png"
+                  alt="Aneey"
+                  class="team-card__image"
+                />
+              </div>
+              <div class="team-card__body">
+                <h3 class="team-card__name">Aneey</h3>
+                <p class="team-card__role">Customer Experience Lead</p>
+                <div class="team-card__social">
+                  <a href="#" class="team-card__social-link">
+                    <img src="./images/facebook.svg" alt="Facebook" />
+                  </a>
+                  <a href="#" class="team-card__social-link">
+                    <img src="./images/instagram.svg" alt="Instagram" />
+                  </a>
+                  <a href="#" class="team-card__social-link">
+                    <img src="./images/linkedin.svg" alt="LinkedIn" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ready To Transform Section -->
+      <section class="about-cta">
+        <div class="about-cta__inner u-container">
+          <div class="about-cta__content">
+            <h2 class="about-cta__title">
+              Ready To Transform<br />Your Living Space?
+            </h2>
+            <p class="about-cta__text">
+              Explore our collection and find furniture that fits your style and
+              your home.
+            </p>
+            <a href="#" class="about-cta__btn">Shop Collection</a>
+          </div>
+
+          <!-- Before/After Image Slider -->
+          <div class="about-cta__slider">
+            <div class="about-cta__image-wrapper">
+              <img
+                src="./images/encourage-before.png"
+                alt="Before transformation"
+                class="about-cta__img about-cta__img--before"
+              />
+              <img
+                src="./images/encourage.png"
+                alt="After transformation"
+                class="about-cta__img about-cta__img--after"
+              />
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button
+              class="about-cta__nav about-cta__nav--prev"
+              type="button"
+              aria-label="Previous"
+            >
+              <img src="./images/next-slide-arrow.svg" alt="Previous" />
+            </button>
+            <button
+              class="about-cta__nav about-cta__nav--next"
+              type="button"
+              aria-label="Next"
+            >
+              <img src="./images/next-slide-arrow.svg" alt="Next" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust Strip -->
+      <section class="trust-strip">
+        <div class="trust-strip__inner u-container">
+          <div class="trust-item">
+            <img src="./images/trophy.svg" alt="" class="trust-item__icon" />
+            <div class="trust-item__text">
+              <strong>High Quality</strong>
+              <span>crafted from top materials</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img src="./images/guarantee.svg" alt="" class="trust-item__icon" />
+            <div class="trust-item__text">
+              <strong>Warranty Protection</strong>
+              <span>Over 2 years</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img src="./images/shipping.svg" alt="" class="trust-item__icon" />
+            <div class="trust-item__text">
+              <strong>Free Shipping</strong>
+              <span>Order over 150 $</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img
+              src="./images/customer-support.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>24 / 7 Support</strong>
+              <span>Dedicated support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer__top u-container">
+        <div class="site-footer__brand-block">
+          <h3 class="site-footer__brand">Furniro.</h3>
+          <p class="site-footer__address">
+            400 University Drive Suite 200 Coral Gables, FL 33134 USA
+          </p>
+        </div>
+
+        <div class="site-footer__group">
+          <h4 class="site-footer__group-title">Links</h4>
+          <a href="../Home/index.html" class="site-footer__link">Home</a>
+          <a href="../Shop/shop.html" class="site-footer__link">Shop</a>
+          <a href="#" class="site-footer__link">About</a>
+          <a href="#" class="site-footer__link">Contact</a>
+        </div>
+
+        <div class="site-footer__group">
+          <h4 class="site-footer__group-title">Help</h4>
+          <a href="#" class="site-footer__link">Payment Options</a>
+          <a href="#" class="site-footer__link">Returns</a>
+          <a href="#" class="site-footer__link">Privacy Policies</a>
+        </div>
+
+        <div class="site-footer__group site-footer__group--newsletter">
+          <h4 class="site-footer__group-title">Newsletter</h4>
+          <form class="site-footer__newsletter" action="#" method="post">
+            <input
+              class="site-footer__input"
+              type="email"
+              placeholder="Enter Your Email Address"
+            />
+            <button class="site-footer__subscribe" type="submit">
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom u-container">
+        <p class="site-footer__copyright">2023 furino. All rights reverved</p>
+      </div>
+    </footer>
+
+    <script src="./js/about.js"></script>
+  </body>
+</html>

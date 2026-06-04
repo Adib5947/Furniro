@@ -30,41 +30,12 @@ navLinks.forEach((link) => {
   });
 });
 
-// Product card hover tilt effect
-const productCards = document.querySelectorAll(".product-card");
-
-productCards.forEach((card) => {
-  card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateX = ((y - centerY) / centerY) * -4;
-    const rotateY = ((x - centerX) / centerX) * 4;
-
-    card.style.transform = `
-      perspective(1000px)
-      rotateX(${rotateX}deg)
-      rotateY(${rotateY}deg)
-      translateY(-8px)
-    `;
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "translateY(0)";
-  });
-});
-
 // Inspiration Slider
 
 const inspirationGallery = document.querySelector(".inspiration__gallery");
 const nextBtn = document.querySelector(".inspiration__next");
 const prevBtn = document.querySelector(".inspiration__prev");
-const SCROLL_AMOUNT = 420; // px per click
+const SCROLL_AMOUNT = 420;
 
 function updateNavButtons() {
   if (!inspirationGallery) return;
@@ -74,7 +45,7 @@ function updateNavButtons() {
     inspirationGallery.scrollWidth - inspirationGallery.clientWidth,
   );
 
-  // Hide prev when we are all the way to the left (at start)
+  // Hide prev
   if (prevBtn) {
     if (scrollLeft <= 0) {
       prevBtn.classList.add("inspiration__nav--hidden");
@@ -83,7 +54,7 @@ function updateNavButtons() {
     }
   }
 
-  // Hide next when we are all the way to the right (at end)
+  // Hide next
   if (nextBtn) {
     if (scrollLeft >= maxScroll - 2) {
       nextBtn.classList.add("inspiration__nav--hidden");

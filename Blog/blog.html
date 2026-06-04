@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog – Furniro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/blog.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="site-header__inner u-container">
+        <a href="../Home/index.html" class="site-header__brand brand-mark">
+          <img
+            src="./images/logo.svg"
+            alt="Furniro logo"
+            class="brand-mark__logo"
+          />
+          <span class="brand-mark__name">Furniro</span>
+        </a>
+
+        <button
+          class="nav-hamburger"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="nav-hamburger__bar"></span>
+          <span class="nav-hamburger__bar"></span>
+          <span class="nav-hamburger__bar"></span>
+        </button>
+
+        <nav class="site-header__nav nav-menu" id="main-nav">
+          <a href="../Home/index.html" class="nav-menu__link">Home</a>
+          <a href="../Shop/shop.html" class="nav-menu__link">Shop</a>
+          <a href="../About/about.html" class="nav-menu__link">About</a>
+          <a href="../Contact/contact.html" class="nav-menu__link">Contact</a>
+
+          <div
+            class="site-header__actions header-actions header-actions--mobile"
+          >
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Account"
+            >
+              <img src="./images/account-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Search"
+            >
+              <img src="./images/search-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Wishlist"
+            >
+              <img src="./images/heart-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Cart"
+            >
+              <img src="./images/cart-icon.svg" alt="" />
+            </button>
+          </div>
+        </nav>
+
+        <div
+          class="site-header__actions header-actions header-actions--desktop"
+        >
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Account"
+          >
+            <img src="./images/account-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Search"
+          >
+            <img src="./images/search-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Wishlist"
+          >
+            <img src="./images/heart-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Cart"
+          >
+            <img src="./images/cart-icon.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Banner -->
+      <section class="page-hero">
+        <img
+          src="./images/rectangle 1.png"
+          alt="Blog banner background"
+          class="page-hero__bg"
+        />
+        <div class="page-hero__content">
+          <img src="./images/logo.svg" alt="" class="page-hero__logo" />
+          <h1 class="page-hero__title">Blog</h1>
+          <nav class="breadcrumb" aria-label="breadcrumb">
+            <a href="../Home/index.html" class="breadcrumb__link">Home</a>
+            <img
+              src="./images/arrow-shop.svg"
+              alt=""
+              class="breadcrumb__sep"
+              aria-hidden="true"
+            />
+            <span class="breadcrumb__current">Blog</span>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Blog Section -->
+      <section class="blog-section">
+        <div class="blog-section__inner u-container">
+          <div class="blog-content">
+            <!-- Main Blog Posts -->
+            <div class="blog-posts">
+              <!-- Blog Post 1 -->
+              <article class="blog-post">
+                <div class="blog-post__media">
+                  <img
+                    src="./images/blog-hero.png"
+                    alt="Going all-in with millennial design"
+                    class="blog-post__image"
+                  />
+                </div>
+                <div class="blog-post__meta">
+                  <span class="blog-post__author">
+                    <img src="./images/admin.svg" alt="" />
+                    Admin
+                  </span>
+                  <span class="blog-post__date">
+                    <img src="./images/calender.svg" alt="" />
+                    14 Oct 2022
+                  </span>
+                  <span class="blog-post__category">
+                    <img src="./images/tag.svg" alt="" />
+                    Wood
+                  </span>
+                </div>
+                <h2 class="blog-post__title">
+                  Going all-in with millennial design
+                </h2>
+                <p class="blog-post__excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Mus mauris vitae ultricies leo integer malesuada nunc. In
+                  nulla posuere sollicitudin aliquam ultrices. Morbi blandit
+                  cursus risus at ultrices mi tempus imperdiet. Libero enim sed
+                  faucibus turpis in. Cursus mattis molestie a iaculis at erat.
+                  Nibh cras pulvinar mattis nunc sed blandit libero.
+                  Pellentesque elit ullamcorper dignissim cras tincidunt.
+                  Pharetra et ultrices neque ornare aenean euismod elementum.
+                </p>
+                <a href="#" class="blog-post__read-more">Read more</a>
+              </article>
+
+              <!-- Blog Post 2 -->
+              <article class="blog-post">
+                <div class="blog-post__media">
+                  <img
+                    src="./images/blog-hero2.png"
+                    alt="Exploring new ways of decorating"
+                    class="blog-post__image"
+                  />
+                </div>
+                <div class="blog-post__meta">
+                  <span class="blog-post__author">
+                    <img src="./images/admin.svg" alt="" />
+                    Admin
+                  </span>
+                  <span class="blog-post__date">
+                    <img src="./images/calender.svg" alt="" />
+                    14 Oct 2022
+                  </span>
+                  <span class="blog-post__category">
+                    <img src="./images/tag.svg" alt="" />
+                    Handmade
+                  </span>
+                </div>
+                <h2 class="blog-post__title">
+                  Exploring new ways of decorating
+                </h2>
+                <p class="blog-post__excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Mus mauris vitae ultricies leo integer malesuada nunc. In
+                  nulla posuere sollicitudin aliquam ultrices. Morbi blandit
+                  cursus risus at ultrices mi tempus imperdiet. Libero enim sed
+                  faucibus turpis in. Cursus mattis molestie a iaculis at erat.
+                  Nibh cras pulvinar mattis nunc sed blandit libero.
+                  Pellentesque elit ullamcorper dignissim cras tincidunt.
+                  Pharetra et ultrices neque ornare aenean euismod elementum.
+                </p>
+                <a href="#" class="blog-post__read-more">Read more</a>
+              </article>
+
+              <!-- Blog Post 3 -->
+              <article class="blog-post">
+                <div class="blog-post__media">
+                  <img
+                    src="./images/blog-hero3.png"
+                    alt="Handmade pieces that took time to make"
+                    class="blog-post__image"
+                  />
+                </div>
+                <div class="blog-post__meta">
+                  <span class="blog-post__author">
+                    <img src="./images/admin.svg" alt="" />
+                    Admin
+                  </span>
+                  <span class="blog-post__date">
+                    <img src="./images/calender.svg" alt="" />
+                    14 Oct 2022
+                  </span>
+                  <span class="blog-post__category">
+                    <img src="./images/tag.svg" alt="" />
+                    Wood
+                  </span>
+                </div>
+                <h2 class="blog-post__title">
+                  Handmade pieces that took time to make
+                </h2>
+                <p class="blog-post__excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Mus mauris vitae ultricies leo integer malesuada nunc. In
+                  nulla posuere sollicitudin aliquam ultrices. Morbi blandit
+                  cursus risus at ultrices mi tempus imperdiet. Libero enim sed
+                  faucibus turpis in. Cursus mattis molestie a iaculis at erat.
+                  Nibh cras pulvinar mattis nunc sed blandit libero.
+                  Pellentesque elit ullamcorper dignissim cras tincidunt.
+                  Pharetra et ultrices neque ornare aenean euismod elementum.
+                </p>
+                <a href="#" class="blog-post__read-more">Read more</a>
+              </article>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="blog-sidebar">
+            <!-- Search -->
+            <div class="sidebar-widget">
+              <div class="search-form">
+                <input
+                  type="text"
+                  class="search-form__input"
+                  placeholder="Search..."
+                />
+                <button class="search-form__button" type="button">
+                  <img src="./images/search-icon.svg" alt="Search" />
+                </button>
+              </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="sidebar-widget">
+              <h3 class="sidebar-widget__title">Categories</h3>
+              <ul class="categories-list">
+                <li class="categories-list__item">
+                  <a href="#" class="categories-list__link">
+                    <span>Crafts</span>
+                    <span class="categories-list__count">2</span>
+                  </a>
+                </li>
+                <li class="categories-list__item">
+                  <a href="#" class="categories-list__link">
+                    <span>Design</span>
+                    <span class="categories-list__count">8</span>
+                  </a>
+                </li>
+                <li class="categories-list__item">
+                  <a href="#" class="categories-list__link">
+                    <span>Handmade</span>
+                    <span class="categories-list__count">7</span>
+                  </a>
+                </li>
+                <li class="categories-list__item">
+                  <a href="#" class="categories-list__link">
+                    <span>Interior</span>
+                    <span class="categories-list__count">1</span>
+                  </a>
+                </li>
+                <li class="categories-list__item">
+                  <a href="#" class="categories-list__link">
+                    <span>Wood</span>
+                    <span class="categories-list__count">6</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Recent Posts -->
+            <div class="sidebar-widget">
+              <h3 class="sidebar-widget__title">Recent Posts</h3>
+              <ul class="recent-posts">
+                <li class="recent-posts__item">
+                  <img
+                    src="./images/recent-post-0.png"
+                    alt="Going all-in with millennial design"
+                    class="recent-posts__thumb"
+                  />
+                  <div class="recent-posts__content">
+                    <a href="#" class="recent-posts__title"
+                      >Going all-in with millennial design</a
+                    >
+                    <span class="recent-posts__date">03 Aug 2022</span>
+                  </div>
+                </li>
+                <li class="recent-posts__item">
+                  <img
+                    src="./images/recent-post-1.png"
+                    alt="Exploring new ways of decorating"
+                    class="recent-posts__thumb"
+                  />
+                  <div class="recent-posts__content">
+                    <a href="#" class="recent-posts__title"
+                      >Exploring new ways of decorating</a
+                    >
+                    <span class="recent-posts__date">03 Aug 2022</span>
+                  </div>
+                </li>
+                <li class="recent-posts__item">
+                  <img
+                    src="./images/recent-post-2.png"
+                    alt="Handmade pieces that took time to make"
+                    class="recent-posts__thumb"
+                  />
+                  <div class="recent-posts__content">
+                    <a href="#" class="recent-posts__title"
+                      >Handmade pieces that took time to make</a
+                    >
+                    <span class="recent-posts__date">03 Aug 2022</span>
+                  </div>
+                </li>
+                <li class="recent-posts__item">
+                  <img
+                    src="./images/recent-post-3.png"
+                    alt="Modern home in Milan"
+                    class="recent-posts__thumb"
+                  />
+                  <div class="recent-posts__content">
+                    <a href="#" class="recent-posts__title"
+                      >Modern home in Milan</a
+                    >
+                    <span class="recent-posts__date">03 Aug 2022</span>
+                  </div>
+                </li>
+                <li class="recent-posts__item">
+                  <img
+                    src="./images/recent-post-4.png"
+                    alt="Colorful office redesign"
+                    class="recent-posts__thumb"
+                  />
+                  <div class="recent-posts__content">
+                    <a href="#" class="recent-posts__title"
+                      >Colorful office redesign</a
+                    >
+                    <span class="recent-posts__date">03 Aug 2022</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Pagination (MOVED OUTSIDE blog-content) -->
+        <div class="pagination">
+          <button class="pagination__btn pagination__btn--active">1</button>
+          <button class="pagination__btn">2</button>
+          <button class="pagination__btn">3</button>
+          <button class="pagination__btn pagination__btn--next">Next</button>
+        </div>
+      </section>
+
+      <!-- Trust Strip -->
+      <section class="trust-strip">
+        <div class="trust-strip__inner u-container">
+          <div class="trust-item">
+            <img src="./images/trophy.svg" alt="" class="trust-item__icon" />
+            <div class="trust-item__text">
+              <strong>High Quality</strong>
+              <span>crafted from top materials</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img src="./images/guarantee.svg" alt="" class="trust-item__icon" />
+            <div class="trust-item__text">
+              <strong>Warranty Protection</strong>
+              <span>Over 2 years</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img src="./images/shipping.svg" alt="" class="trust-item__icon" />
+            <div class="trust-item__text">
+              <strong>Free Shipping</strong>
+              <span>Order over 150 $</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img
+              src="./images/customer-support.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>24 / 7 Support</strong>
+              <span>Dedicated support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer__top u-container">
+        <div class="site-footer__brand-block">
+          <h3 class="site-footer__brand">Furniro.</h3>
+          <p class="site-footer__address">
+            400 University Drive Suite 200 Coral Gables, FL 33134 USA
+          </p>
+        </div>
+
+        <div class="site-footer__group">
+          <h4 class="site-footer__group-title">Links</h4>
+          <a href="../Home/index.html" class="site-footer__link">Home</a>
+          <a href="../Shop/shop.html" class="site-footer__link">Shop</a>
+          <a href="../About/about.html" class="site-footer__link">About</a>
+          <a href="../Contact/contact.html" class="site-footer__link"
+            >Contact</a
+          >
+        </div>
+
+        <div class="site-footer__group">
+          <h4 class="site-footer__group-title">Help</h4>
+          <a href="#" class="site-footer__link">Payment Options</a>
+          <a href="#" class="site-footer__link">Returns</a>
+          <a href="#" class="site-footer__link">Privacy Policies</a>
+        </div>
+
+        <div class="site-footer__group site-footer__group--newsletter">
+          <h4 class="site-footer__group-title">Newsletter</h4>
+          <form class="site-footer__newsletter" action="#" method="post">
+            <input
+              class="site-footer__input"
+              type="email"
+              placeholder="Enter Your Email Address"
+            />
+            <button class="site-footer__subscribe" type="submit">
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom u-container">
+        <p class="site-footer__copyright">2023 furino. All rights reverved</p>
+      </div>
+    </footer>
+
+    <script src="./js/blog.js"></script>
+  </body>
+</html>

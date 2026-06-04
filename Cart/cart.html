@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart – Furniro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/cart.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="site-header__inner u-container">
+        <a href="../Home/index.html" class="site-header__brand brand-mark">
+          <img
+            src="../Single_Product/images/logo.svg"
+            alt="Furniro logo"
+            class="brand-mark__logo"
+          />
+          <span class="brand-mark__name">Furniro</span>
+        </a>
+
+        <button
+          class="nav-hamburger"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="nav-hamburger__bar"></span>
+          <span class="nav-hamburger__bar"></span>
+          <span class="nav-hamburger__bar"></span>
+        </button>
+
+        <nav class="site-header__nav nav-menu" id="main-nav">
+          <a href="../Home/index.html" class="nav-menu__link">Home</a>
+          <a href="../Shop/shop.html" class="nav-menu__link">Shop</a>
+          <a href="../About/about.html" class="nav-menu__link">About</a>
+          <a href="../Contact/contact.html" class="nav-menu__link">Contact</a>
+
+          <div
+            class="site-header__actions header-actions header-actions--mobile"
+          >
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Account"
+            >
+              <img src="../Single_Product/images/account-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Search"
+            >
+              <img src="../Single_Product/images/search-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Wishlist"
+            >
+              <img src="../Single_Product/images/heart-icon.svg" alt="" />
+            </button>
+            <button
+              class="header-actions__button"
+              type="button"
+              aria-label="Cart"
+            >
+              <img src="../Single_Product/images/cart-icon.svg" alt="" />
+            </button>
+          </div>
+        </nav>
+
+        <div
+          class="site-header__actions header-actions header-actions--desktop"
+        >
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Account"
+          >
+            <img src="../Single_Product/images/account-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Search"
+          >
+            <img src="../Single_Product/images/search-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Wishlist"
+          >
+            <img src="../Single_Product/images/heart-icon.svg" alt="" />
+          </button>
+          <button
+            class="header-actions__button"
+            type="button"
+            aria-label="Cart"
+          >
+            <img src="../Single_Product/images/cart-icon.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Banner -->
+      <section class="page-hero">
+        <img
+          src="../Single_Product/images/rectangle 1.png"
+          alt="Cart banner background"
+          class="page-hero__bg"
+        />
+        <div class="page-hero__content">
+          <img
+            src="../Single_Product/images/logo.svg"
+            alt=""
+            class="page-hero__logo"
+          />
+          <h1 class="page-hero__title">Cart</h1>
+          <nav class="breadcrumb" aria-label="breadcrumb">
+            <a href="../Shop/shop.html" class="breadcrumb__link">Shop</a>
+            <img
+              src="../Single_Product/images/arrow-shop.svg"
+              alt=""
+              class="breadcrumb__sep"
+              aria-hidden="true"
+            />
+            <span class="breadcrumb__current">Cart</span>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Cart Section -->
+      <section class="cart-section">
+        <div class="cart-section__inner u-container">
+          <!-- Cart Table -->
+          <div class="cart-table-wrap">
+            <div class="cart-table__head">
+              <span>Product</span>
+              <span>Price</span>
+              <span>Quantity</span>
+              <span>Subtotal</span>
+            </div>
+
+            <div class="cart-items" id="cartItems"></div>
+
+            <!-- Empty state -->
+            <div class="cart-empty" id="cartEmpty" hidden>
+              <p>
+                Your cart is empty.
+                <a href="../Shop/shop.html">Continue shopping</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Cart Totals -->
+          <aside class="cart-totals">
+            <h2 class="cart-totals__title">Cart Totals</h2>
+            <div class="cart-totals__row">
+              <span class="cart-totals__label">Subtotal</span>
+              <span
+                class="cart-totals__value cart-totals__value--muted"
+                id="cartSubtotal"
+                >Rs. 0.00</span
+              >
+            </div>
+            <div class="cart-totals__row cart-totals__row--total">
+              <span class="cart-totals__label">Total</span>
+              <span
+                class="cart-totals__value cart-totals__value--gold"
+                id="cartTotal"
+                >Rs. 0.00</span
+              >
+            </div>
+            <a
+              href="../Checkout/checkout.html"
+              class="cart-totals__checkout-btn"
+            >
+              Check Out
+            </a>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Trust Strip -->
+      <section class="trust-strip">
+        <div class="trust-strip__inner u-container">
+          <div class="trust-item">
+            <img
+              src="../Single_Product/images/trophy.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>High Quality</strong>
+              <span>crafted from top materials</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img
+              src="../Single_Product/images/guarantee.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>Warranty Protection</strong>
+              <span>Over 2 years</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img
+              src="../Single_Product/images/shipping.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>Free Shipping</strong>
+              <span>Order over 150 $</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <img
+              src="../Single_Product/images/customer-support.svg"
+              alt=""
+              class="trust-item__icon"
+            />
+            <div class="trust-item__text">
+              <strong>24 / 7 Support</strong>
+              <span>Dedicated support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer__top u-container">
+        <div class="site-footer__brand-block">
+          <h3 class="site-footer__brand">Furniro.</h3>
+          <p class="site-footer__address">
+            400 University Drive Suite 200 Coral Gables, FL 33134 USA
+          </p>
+        </div>
+
+        <div class="site-footer__group">
+          <h4 class="site-footer__group-title">Links</h4>
+          <a href="../Home/index.html" class="site-footer__link">Home</a>
+          <a href="../Shop/shop.html" class="site-footer__link">Shop</a>
+          <a href="../About/about.html" class="site-footer__link">About</a>
+          <a href="../Contact/contact.html" class="site-footer__link"
+            >Contact</a
+          >
+        </div>
+
+        <div class="site-footer__group">
+          <h4 class="site-footer__group-title">Help</h4>
+          <a href="#" class="site-footer__link">Payment Options</a>
+          <a href="#" class="site-footer__link">Returns</a>
+          <a href="#" class="site-footer__link">Privacy Policies</a>
+        </div>
+
+        <div class="site-footer__group site-footer__group--newsletter">
+          <h4 class="site-footer__group-title">Newsletter</h4>
+          <form class="site-footer__newsletter" action="#" method="post">
+            <input
+              class="site-footer__input"
+              type="email"
+              placeholder="Enter Your Email Address"
+            />
+            <button class="site-footer__subscribe" type="submit">
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom u-container">
+        <p class="site-footer__copyright">2023 furino. All rights reverved</p>
+      </div>
+    </footer>
+
+    <script src="./js/cart.js"></script>
+  </body>
+</html>
