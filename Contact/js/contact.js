@@ -50,7 +50,6 @@ if (contactForm) {
       return;
     }
 
-    // Here you would normally send the data to a server
     console.log("Form submitted:", { name, email, subject, message });
 
     // Show success message
@@ -61,7 +60,7 @@ if (contactForm) {
   });
 }
 
-// Add focus effects to form inputs
+// Add focus effects
 const formInputs = document.querySelectorAll(
   ".contact-form__input, .contact-form__textarea",
 );

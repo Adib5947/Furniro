@@ -40,7 +40,6 @@ if (searchForm && searchInput) {
     const searchTerm = searchInput.value.trim();
     if (searchTerm) {
       console.log("Searching for:", searchTerm);
-      // Add your search functionality here
       alert(`Searching for: ${searchTerm}`);
     }
   });
@@ -51,11 +50,9 @@ const paginationBtns = document.querySelectorAll(".pagination__btn");
 
 paginationBtns.forEach((btn) => {
   btn.addEventListener("click", function () {
-    // Remove active class from all buttons
     paginationBtns.forEach((b) =>
       b.classList.remove("pagination__btn--active"),
     );
-    // Add active class to clicked button
     this.classList.add("pagination__btn--active");
   });
 });

@@ -10,7 +10,7 @@ if (hamburger && navMenu) {
     hamburger.setAttribute("aria-expanded", isOpen);
   });
 
-  // Close nav when a link is clicked
+  // Close nav
   navMenu.querySelectorAll(".nav-menu__link").forEach((link) => {
     link.addEventListener("click", () => {
       hamburger.classList.remove("is-open");
