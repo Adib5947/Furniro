@@ -22,7 +22,6 @@ if (hamburger && navMenu) {
 }
 
 // Active nav link
-
 const navLinks = document.querySelectorAll(".nav-menu__link");
 
 navLinks.forEach((link) => {
@@ -33,7 +32,6 @@ navLinks.forEach((link) => {
 });
 
 // Filter Drawer toggle
-
 const filterToggleBtn = document.getElementById("filterToggleBtn");
 const filterDrawer = document.getElementById("filterDrawer");
 
@@ -46,7 +44,6 @@ if (filterToggleBtn && filterDrawer) {
 }
 
 // Price Range
-
 const priceRange = document.getElementById("priceRange");
 const priceRangeVal = document.getElementById("priceRangeVal");
 
@@ -61,7 +58,6 @@ if (priceRange && priceRangeVal) {
 }
 
 // View Toggle (Grid / List)
-
 const viewBtns = document.querySelectorAll(".toolbar-view");
 const productsGrid = document.getElementById("productsGrid");
 
@@ -80,12 +76,15 @@ viewBtns.forEach((btn) => {
       productsGrid.classList.remove("products__grid--list");
     }
 
+    if (isMobile()) {
+      buildCarousel();
+    }
+
     initCardTilt();
   });
 });
 
 // Show Count selector
-
 const showCountEl = document.getElementById("showCount");
 const rangeEndEl = document.getElementById("rangeEnd");
 const rangeStartEl = document.getElementById("rangeStart");
@@ -110,7 +109,6 @@ if (showCountEl) {
 updateResultsLabel(16, 1);
 
 // Sort selector
-
 const sortByEl = document.getElementById("sortBy");
 
 if (sortByEl) {
@@ -142,7 +140,6 @@ paginationBtns.forEach((btn) => {
       if (!isNaN(page)) currentPage = page;
     }
 
-    // Update active state
     paginationBtns.forEach((b) => {
       if (!b.classList.contains("pagination__btn--next")) {
         b.classList.remove("pagination__btn--active");
@@ -157,12 +154,10 @@ paginationBtns.forEach((btn) => {
       }
     });
 
-    // Update results label
     if (showCountEl) {
       updateResultsLabel(Number(showCountEl.value), currentPage);
     }
 
-    // Smooth scroll to products top
     const shopProducts = document.getElementById("shopProducts");
     if (shopProducts) {
       shopProducts.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -171,17 +166,14 @@ paginationBtns.forEach((btn) => {
 });
 
 // Filter Apply button
-
 const filterApplyBtn = document.querySelector(".filter-apply-btn");
 
 if (filterApplyBtn && filterDrawer) {
   filterApplyBtn.addEventListener("click", () => {
-    // Close the drawer
     filterDrawer.classList.remove("is-open");
     if (filterToggleBtn) filterToggleBtn.setAttribute("aria-expanded", "false");
     filterDrawer.setAttribute("aria-hidden", "true");
 
-    // Flash the grid
     if (productsGrid) {
       productsGrid.style.opacity = "0.4";
       productsGrid.style.transition = "opacity .25s";
@@ -192,8 +184,19 @@ if (filterApplyBtn && filterDrawer) {
   });
 }
 
-// Smooth scroll
+// Compare buttons
+document
+  .querySelectorAll(".product-card__overlay-actions span")
+  .forEach((span) => {
+    if (span.textContent.trim().startsWith("Compare")) {
+      span.addEventListener("click", (e) => {
+        e.stopPropagation();
+        window.location.href = "../Comparison/comparison.html";
+      });
+    }
+  });
 
+// Smooth scroll for # links
 document.querySelectorAll('a[href="#"]').forEach((anchor) => {
   anchor.addEventListener("click", (e) => {
     e.preventDefault();
@@ -202,7 +205,6 @@ document.querySelectorAll('a[href="#"]').forEach((anchor) => {
 });
 
 // Footer brand
-
 const footerBrand = document.querySelector(".site-footer__brand");
 
 if (footerBrand) {
@@ -212,7 +214,7 @@ if (footerBrand) {
   });
 }
 
-// Scroll-reveal animation
+// Scroll-reveal
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
@@ -227,7 +229,6 @@ if ("IntersectionObserver" in window) {
     { threshold: 0.12 },
   );
 
-  // Add base hidden style via JS
   const style = document.createElement("style");
   style.textContent = `
     .product-card {
@@ -250,3 +251,88 @@ if ("IntersectionObserver" in window) {
     revealObserver.observe(card);
   });
 }
+
+// Mobile
+
+const CARDS_PER_ROW = 4;
+const MOBILE_BREAKPOINT = 700;
+
+function isMobile() {
+  return window.innerWidth <= MOBILE_BREAKPOINT;
+}
+
+function destroyCarousel() {
+  if (!productsGrid) return;
+
+  const allRows = productsGrid.querySelectorAll(".carousel-row");
+  allRows.forEach((row) => {
+    row.querySelectorAll(".product-card").forEach((card) => {
+      productsGrid.appendChild(card);
+    });
+    row.remove();
+  });
+
+  const dotContainers = productsGrid.querySelectorAll(".carousel-dots");
+  dotContainers.forEach((d) => d.remove());
+}
+
+function buildCarousel() {
+  if (!productsGrid) return;
+
+  destroyCarousel();
+
+  const cards = Array.from(productsGrid.querySelectorAll(".product-card"));
+  if (!cards.length) return;
+
+  for (let i = 0; i < cards.length; i += CARDS_PER_ROW) {
+    const chunk = cards.slice(i, i + CARDS_PER_ROW);
+
+    const row = document.createElement("div");
+    row.className = "carousel-row";
+    chunk.forEach((card) => row.appendChild(card));
+    chunk.forEach((card) => card.classList.add("card--visible"));
+    productsGrid.appendChild(row);
+
+    // Dot indicators
+    const dotsWrap = document.createElement("div");
+    dotsWrap.className = "carousel-dots";
+
+    chunk.forEach((_, idx) => {
+      const dot = document.createElement("span");
+      dot.className = "carousel-dot" + (idx === 0 ? " active" : "");
+      dotsWrap.appendChild(dot);
+    });
+
+    productsGrid.appendChild(dotsWrap);
+
+    // Update dots on scroll
+    const dots = dotsWrap.querySelectorAll(".carousel-dot");
+    row.addEventListener("scroll", () => {
+      const cardWidth = row.firstElementChild
+        ? row.firstElementChild.offsetWidth + 14
+        : 1;
+      const active = Math.round(row.scrollLeft / cardWidth);
+      dots.forEach((d, idx) => {
+        d.classList.toggle("active", idx === active);
+      });
+    });
+  }
+}
+
+// Runs in any sizes
+function applyLayout() {
+  if (isMobile()) {
+    buildCarousel();
+  } else {
+    destroyCarousel();
+  }
+}
+
+// Resize Handler
+let resizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(applyLayout, 120);
+});
+
+applyLayout();

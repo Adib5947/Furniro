@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="./css/cartsidebar.css" />
   </head>
   <body>
-    <!-- Header -->
     <header class="site-header">
       <div class="site-header__inner u-container">
         <a href="../Home/index.html" class="site-header__brand brand-mark">
@@ -26,7 +25,6 @@
           />
           <span class="brand-mark__name">Furniro</span>
         </a>
-
         <button
           class="nav-hamburger"
           type="button"
@@ -38,13 +36,11 @@
           <span class="nav-hamburger__bar"></span>
           <span class="nav-hamburger__bar"></span>
         </button>
-
         <nav class="site-header__nav nav-menu" id="main-nav">
           <a href="../Home/index.html" class="nav-menu__link">Home</a>
           <a href="../Shop/shop.html" class="nav-menu__link">Shop</a>
           <a href="../About/about.html" class="nav-menu__link">About</a>
           <a href="../Contact/contact.html" class="nav-menu__link">Contact</a>
-
           <div
             class="site-header__actions header-actions header-actions--mobile"
           >
@@ -80,7 +76,6 @@
             </button>
           </div>
         </nav>
-
         <div
           class="site-header__actions header-actions header-actions--desktop"
         >
@@ -122,7 +117,6 @@
     </header>
 
     <main>
-      <!-- Breadcrumb Strip -->
       <div class="page-breadcrumb">
         <div class="u-container">
           <nav class="breadcrumb" aria-label="breadcrumb">
@@ -146,7 +140,6 @@
         </div>
       </div>
 
-      <!-- Product Detail -->
       <section class="product-detail u-container">
         <div class="product-detail__thumbs" id="productThumbs">
           <button
@@ -182,7 +175,6 @@
             <img src="./images/sofa-set-preview-4.png" alt="Sofa thumbnail 4" />
           </button>
         </div>
-
         <div class="product-detail__main-image">
           <img
             src="./images/sofa-set-preview-0.png"
@@ -191,13 +183,9 @@
             class="product-detail__img"
           />
         </div>
-
-        <!-- Product Info -->
         <div class="product-detail__info">
           <h1 class="product-detail__title">Asgaard sofa</h1>
           <p class="product-detail__price">Rs. 250,000.00</p>
-
-          <!-- Rating -->
           <div class="product-detail__rating">
             <div class="stars" aria-label="4.5 out of 5 stars">
               <img src="./images/star-filled.svg" alt="" class="star" />
@@ -211,14 +199,11 @@
             >
             <span class="product-detail__reviews">5 Customer Review</span>
           </div>
-
           <p class="product-detail__desc">
             Setting the bar as one of the loudest speakers in its class, the
             Kilburn is a compact, stout-hearted hero with a well-balanced audio
             which boasts a clear midrange and extended highs for a sound.
           </p>
-
-          <!-- Size -->
           <div class="product-detail__option-group">
             <p class="product-detail__option-label">Size</p>
             <div
@@ -242,8 +227,6 @@
               </button>
             </div>
           </div>
-
-          <!-- Color -->
           <div class="product-detail__option-group">
             <p class="product-detail__option-label">Color</p>
             <div
@@ -278,8 +261,6 @@
               ></button>
             </div>
           </div>
-
-          <!-- Add to Cart Row -->
           <div class="product-detail__cart-row">
             <div class="qty-control" aria-label="Quantity">
               <button
@@ -305,11 +286,7 @@
             </button>
             <button class="btn-compare" type="button">+ Compare</button>
           </div>
-
-          <!-- Divider -->
           <hr class="product-detail__divider" />
-
-          <!-- Meta -->
           <dl class="product-detail__meta">
             <div class="meta-row">
               <dt>SKU</dt>
@@ -327,22 +304,21 @@
               <dt>Share</dt>
               <dd>
                 <span class="meta-sep">:</span>
-                <a href="#" class="social-link" aria-label="Share on Facebook">
-                  <img src="./images/facebook.svg" alt="Facebook" />
-                </a>
-                <a href="#" class="social-link" aria-label="Share on LinkedIn">
-                  <img src="./images/linkedin.svg" alt="LinkedIn" />
-                </a>
-                <a href="#" class="social-link" aria-label="Share on Twitter">
-                  <img src="./images/twitter.svg" alt="Twitter" />
-                </a>
+                <a href="#" class="social-link" aria-label="Share on Facebook"
+                  ><img src="./images/facebook.svg" alt="Facebook"
+                /></a>
+                <a href="#" class="social-link" aria-label="Share on LinkedIn"
+                  ><img src="./images/linkedin.svg" alt="LinkedIn"
+                /></a>
+                <a href="#" class="social-link" aria-label="Share on Twitter"
+                  ><img src="./images/twitter.svg" alt="Twitter"
+                /></a>
               </dd>
             </div>
           </dl>
         </div>
       </section>
 
-      <!-- Description Tabs -->
       <div class="product-tabs-wrapper">
         <section class="product-tabs u-container">
           <div
@@ -404,8 +380,8 @@
               personal preferences while the guitar-influenced leather strap
               enables easy and stylish travel.
             </p>
-
-            <div class="tab-panel__images">
+            <!-- Images: on desktop 2-col grid, on mobile swipe carousel via JS -->
+            <div class="tab-panel__images" id="tabPanelImages">
               <div class="tab-panel__image-wrap">
                 <img src="./images/cloud-sofa-1.png" alt="Sofa detail view 1" />
               </div>
@@ -460,11 +436,13 @@
                 <div class="review-item__header">
                   <strong class="review-item__author">Adib Ahmed</strong>
                   <div class="stars stars--sm" aria-label="5 stars">
-                    <img src="./images/star-filled.svg" alt="" />
-                    <img src="./images/star-filled.svg" alt="" />
-                    <img src="./images/star-filled.svg" alt="" />
-                    <img src="./images/star-filled.svg" alt="" />
-                    <img src="./images/star-filled.svg" alt="" />
+                    <img src="./images/star-filled.svg" alt="" /><img
+                      src="./images/star-filled.svg"
+                      alt=""
+                    /><img src="./images/star-filled.svg" alt="" /><img
+                      src="./images/star-filled.svg"
+                      alt=""
+                    /><img src="./images/star-filled.svg" alt="" />
                   </div>
                 </div>
                 <p class="review-item__body">
@@ -477,11 +455,13 @@
                 <div class="review-item__header">
                   <strong class="review-item__author">Nusrat Jahan</strong>
                   <div class="stars stars--sm" aria-label="4 stars">
-                    <img src="./images/star-filled.svg" alt="" />
-                    <img src="./images/star-filled.svg" alt="" />
-                    <img src="./images/star-filled.svg" alt="" />
-                    <img src="./images/star-filled.svg" alt="" />
-                    <img src="./images/star-half.svg" alt="" />
+                    <img src="./images/star-filled.svg" alt="" /><img
+                      src="./images/star-filled.svg"
+                      alt=""
+                    /><img src="./images/star-filled.svg" alt="" /><img
+                      src="./images/star-filled.svg"
+                      alt=""
+                    /><img src="./images/star-half.svg" alt="" />
                   </div>
                 </div>
                 <p class="review-item__body">
@@ -494,11 +474,13 @@
                 <div class="review-item__header">
                   <strong class="review-item__author">Tahjid Ahmed</strong>
                   <div class="stars stars--sm" aria-label="5 stars">
-                    <img src="./images/star-filled.svg" alt="" />
-                    <img src="./images/star-filled.svg" alt="" />
-                    <img src="./images/star-filled.svg" alt="" />
-                    <img src="./images/star-filled.svg" alt="" />
-                    <img src="./images/star-filled.svg" alt="" />
+                    <img src="./images/star-filled.svg" alt="" /><img
+                      src="./images/star-filled.svg"
+                      alt=""
+                    /><img src="./images/star-filled.svg" alt="" /><img
+                      src="./images/star-filled.svg"
+                      alt=""
+                    /><img src="./images/star-filled.svg" alt="" />
                   </div>
                 </div>
                 <p class="review-item__body">
@@ -507,8 +489,6 @@
                 </p>
               </div>
             </div>
-
-            <!-- Review Form -->
             <div class="review-form">
               <h3 class="review-form__title">Leave a Review</h3>
               <div class="review-form__fields">
@@ -542,12 +522,13 @@
         </section>
       </div>
 
-      <!-- Related Products  -->
+      <!-- Related Products -->
       <div class="related-products-wrapper">
         <section class="related-products u-container">
           <h2 class="related-products__title">Related Products</h2>
 
-          <div class="products__grid">
+          <div class="products__grid" id="relatedProductsGrid">
+            <!-- Card 1 -->
             <article class="product-card">
               <div class="product-card__media">
                 <img
@@ -558,38 +539,40 @@
                 <span class="product-card__badge product-card__badge--sale"
                   >-30%</span
                 >
-                <div class="product-card__overlay">
-                  <button
-                    class="product-card__overlay-cta js-card-add-to-cart"
-                    type="button"
-                    data-id="SYL001"
-                    data-name="Syltherine"
-                    data-price="2500000"
-                    data-img="./images/product-5.png"
-                  >
-                    Add to cart
-                  </button>
-                  <div class="product-card__overlay-actions">
-                    <span><img src="./images/share.svg" alt="" />Share</span>
-                    <span
-                      ><img src="./images/compare.svg" alt="" />Compare</span
-                    >
-                    <span
-                      ><img src="./images/heart-icon-sm.svg" alt="" />Like</span
-                    >
-                  </div>
-                </div>
               </div>
               <div class="product-card__body">
                 <h3 class="product-card__title">Syltherine</h3>
                 <p class="product-card__subtitle">Stylish cafe chair</p>
+                <p class="product-card__details">
+                  Perfect for cozy cafés and compact spaces.
+                </p>
                 <div class="product-card__price-row">
                   <span class="product-card__price">Rp 2.500.000</span>
                   <span class="product-card__price-old">Rp 3.500.000</span>
                 </div>
               </div>
+              <div class="product-card__overlay">
+                <button
+                  class="product-card__overlay-cta js-card-add-to-cart"
+                  type="button"
+                  data-id="SYL001"
+                  data-name="Syltherine"
+                  data-price="2500000"
+                  data-img="./images/product-5.png"
+                >
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span><img src="./images/share.svg" alt="" />Share</span>
+                  <span><img src="./images/compare.svg" alt="" />Compare</span>
+                  <span
+                    ><img src="./images/heart-icon-sm.svg" alt="" />Like</span
+                  >
+                </div>
+              </div>
             </article>
 
+            <!-- Card 2 -->
             <article class="product-card">
               <div class="product-card__media">
                 <img
@@ -597,37 +580,39 @@
                   alt="Leviosa chair"
                   loading="lazy"
                 />
-                <div class="product-card__overlay">
-                  <button
-                    class="product-card__overlay-cta js-card-add-to-cart"
-                    type="button"
-                    data-id="LEV001"
-                    data-name="Leviosa"
-                    data-price="2500000"
-                    data-img="./images/product-2.png"
-                  >
-                    Add to cart
-                  </button>
-                  <div class="product-card__overlay-actions">
-                    <span><img src="./images/share.svg" alt="" />Share</span>
-                    <span
-                      ><img src="./images/compare.svg" alt="" />Compare</span
-                    >
-                    <span
-                      ><img src="./images/heart-icon-sm.svg" alt="" />Like</span
-                    >
-                  </div>
-                </div>
               </div>
               <div class="product-card__body">
                 <h3 class="product-card__title">Leviosa</h3>
                 <p class="product-card__subtitle">Stylish cafe chair</p>
+                <p class="product-card__details">
+                  Smooth curves with minimalist modern styling.
+                </p>
                 <div class="product-card__price-row">
                   <span class="product-card__price">Rp 2.500.000</span>
                 </div>
               </div>
+              <div class="product-card__overlay">
+                <button
+                  class="product-card__overlay-cta js-card-add-to-cart"
+                  type="button"
+                  data-id="LEV001"
+                  data-name="Leviosa"
+                  data-price="2500000"
+                  data-img="./images/product-2.png"
+                >
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span><img src="./images/share.svg" alt="" />Share</span>
+                  <span><img src="./images/compare.svg" alt="" />Compare</span>
+                  <span
+                    ><img src="./images/heart-icon-sm.svg" alt="" />Like</span
+                  >
+                </div>
+              </div>
             </article>
 
+            <!-- Card 3 -->
             <article class="product-card">
               <div class="product-card__media">
                 <img
@@ -638,38 +623,40 @@
                 <span class="product-card__badge product-card__badge--sale"
                   >-50%</span
                 >
-                <div class="product-card__overlay">
-                  <button
-                    class="product-card__overlay-cta js-card-add-to-cart"
-                    type="button"
-                    data-id="LOL001"
-                    data-name="Lolito"
-                    data-price="7000000"
-                    data-img="./images/product-3.png"
-                  >
-                    Add to cart
-                  </button>
-                  <div class="product-card__overlay-actions">
-                    <span><img src="./images/share.svg" alt="" />Share</span>
-                    <span
-                      ><img src="./images/compare.svg" alt="" />Compare</span
-                    >
-                    <span
-                      ><img src="./images/heart-icon-sm.svg" alt="" />Like</span
-                    >
-                  </div>
-                </div>
               </div>
               <div class="product-card__body">
                 <h3 class="product-card__title">Lolito</h3>
                 <p class="product-card__subtitle">Luxury big sofa</p>
+                <p class="product-card__details">
+                  Deep cushioning for luxurious daily comfort.
+                </p>
                 <div class="product-card__price-row">
                   <span class="product-card__price">Rp 7.000.000</span>
                   <span class="product-card__price-old">Rp 14.000.000</span>
                 </div>
               </div>
+              <div class="product-card__overlay">
+                <button
+                  class="product-card__overlay-cta js-card-add-to-cart"
+                  type="button"
+                  data-id="LOL001"
+                  data-name="Lolito"
+                  data-price="7000000"
+                  data-img="./images/product-3.png"
+                >
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span><img src="./images/share.svg" alt="" />Share</span>
+                  <span><img src="./images/compare.svg" alt="" />Compare</span>
+                  <span
+                    ><img src="./images/heart-icon-sm.svg" alt="" />Like</span
+                  >
+                </div>
+              </div>
             </article>
 
+            <!-- Card 4 -->
             <article class="product-card">
               <div class="product-card__media">
                 <img
@@ -680,35 +667,36 @@
                 <span class="product-card__badge product-card__badge--new"
                   >New</span
                 >
-                <div class="product-card__overlay">
-                  <button
-                    class="product-card__overlay-cta js-card-add-to-cart"
-                    type="button"
-                    data-id="RES001"
-                    data-name="Respira"
-                    data-price="500000"
-                    data-img="./images/product-4.png"
-                  >
-                    Add to cart
-                  </button>
-                  <div class="product-card__overlay-actions">
-                    <span><img src="./images/share.svg" alt="" />Share</span>
-                    <span
-                      ><img src="./images/compare.svg" alt="" />Compare</span
-                    >
-                    <span
-                      ><img src="./images/heart-icon-sm.svg" alt="" />Like</span
-                    >
-                  </div>
-                </div>
               </div>
               <div class="product-card__body">
                 <h3 class="product-card__title">Respira</h3>
                 <p class="product-card__subtitle">
                   Outdoor bar table and stool
                 </p>
+                <p class="product-card__details">
+                  Weather-friendly design for outdoor relaxation.
+                </p>
                 <div class="product-card__price-row">
                   <span class="product-card__price">Rp 500.000</span>
+                </div>
+              </div>
+              <div class="product-card__overlay">
+                <button
+                  class="product-card__overlay-cta js-card-add-to-cart"
+                  type="button"
+                  data-id="RES001"
+                  data-name="Respira"
+                  data-price="500000"
+                  data-img="./images/product-4.png"
+                >
+                  Add to cart
+                </button>
+                <div class="product-card__overlay-actions">
+                  <span><img src="./images/share.svg" alt="" />Share</span>
+                  <span><img src="./images/compare.svg" alt="" />Compare</span>
+                  <span
+                    ><img src="./images/heart-icon-sm.svg" alt="" />Like</span
+                  >
                 </div>
               </div>
             </article>
@@ -721,7 +709,6 @@
       </div>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
       <div class="site-footer__top u-container">
         <div class="site-footer__brand-block">
@@ -730,7 +717,6 @@
             400 University Drive Suite 200 Coral Gables, FL 33134 USA
           </p>
         </div>
-
         <div class="site-footer__group">
           <h4 class="site-footer__group-title">Links</h4>
           <a href="../Home/index.html" class="site-footer__link">Home</a>
@@ -740,14 +726,12 @@
             >Contact</a
           >
         </div>
-
         <div class="site-footer__group">
           <h4 class="site-footer__group-title">Help</h4>
           <a href="#" class="site-footer__link">Payment Options</a>
           <a href="#" class="site-footer__link">Returns</a>
           <a href="#" class="site-footer__link">Privacy Policies</a>
         </div>
-
         <div class="site-footer__group site-footer__group--newsletter">
           <h4 class="site-footer__group-title">Newsletter</h4>
           <form class="site-footer__newsletter" action="#" method="post">
@@ -762,21 +746,15 @@
           </form>
         </div>
       </div>
-
       <div class="site-footer__bottom u-container">
         <p class="site-footer__copyright">2023 furino. All rights reverved</p>
       </div>
     </footer>
 
-    <!-- Toast Notification -->
     <div class="toast" id="cartToast" aria-live="polite" aria-atomic="true">
       <span id="toastMessage">Added to cart!</span>
     </div>
-
-    <!-- Cart Overlay -->
     <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
-
-    <!-- Cart Sidebar -->
     <aside
       class="cart-sidebar"
       id="cartSidebar"
@@ -811,20 +789,15 @@
           </svg>
         </button>
       </div>
-
       <div class="cart-sidebar__divider"></div>
-
       <ul class="cart-sidebar__items" id="cartItems"></ul>
-
       <div class="cart-sidebar__subtotal">
         <span class="cart-sidebar__subtotal-label">Subtotal</span>
         <span class="cart-sidebar__subtotal-value" id="cartSubtotal"
           >Rs. 0.00</span
         >
       </div>
-
       <div class="cart-sidebar__divider"></div>
-
       <div class="cart-sidebar__actions">
         <a href="../Cart/cart.html" class="cart-action-btn">Cart</a>
         <a href="../Checkout/checkout.html" class="cart-action-btn">Checkout</a>
