@@ -10,7 +10,6 @@ if (hamburger && navMenu) {
     navMenu.classList.toggle("nav-menu--open", isOpen);
     hamburger.setAttribute("aria-expanded", isOpen);
   });
-
   navMenu.querySelectorAll(".nav-menu__link").forEach((link) => {
     link.addEventListener("click", () => {
       hamburger.classList.remove("is-open");
@@ -20,76 +19,119 @@ if (hamburger && navMenu) {
   });
 }
 
-// Active nav link
 const navLinks = document.querySelectorAll(".nav-menu__link");
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    navLinks.forEach((item) => item.classList.remove("nav-menu__link--active"));
+    navLinks.forEach((i) => i.classList.remove("nav-menu__link--active"));
     link.classList.add("nav-menu__link--active");
   });
 });
 
-// Footer brand scroll
 const footerBrand = document.querySelector(".site-footer__brand");
 if (footerBrand) {
   footerBrand.style.cursor = "pointer";
-  footerBrand.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  footerBrand.addEventListener("click", () =>
+    window.scrollTo({ top: 0, behavior: "smooth" }),
+  );
 }
 
 // Add A Product Dropdown
-const addProductTrigger = document.getElementById("addProductTrigger");
-const addProductDropdown = document.getElementById("addProductDropdown");
 
-if (addProductTrigger && addProductDropdown) {
-  addProductTrigger.addEventListener("click", () => {
-    const isOpen = addProductDropdown.classList.toggle("is-open");
-    addProductTrigger.setAttribute("aria-expanded", isOpen);
+const trigger = document.getElementById("addProductTrigger");
+const dropdown = document.getElementById("addProductDropdown");
+
+if (trigger && dropdown) {
+  document.body.appendChild(dropdown);
+
+  Object.assign(dropdown.style, {
+    position: "fixed",
+    zIndex: "99999",
+    backgroundColor: "#ffffff",
+    border: "1px solid #d9d9d9",
+    borderRadius: "6px",
+    boxShadow: "0 12px 32px rgba(0,0,0,0.20)",
+    listStyle: "none",
+    padding: "6px 0",
+    maxHeight: "300px",
+    overflowY: "auto",
+    display: "none",
+    minWidth: "220px",
   });
 
-  // Close dropdown
+  // Items solid white background
+  dropdown.querySelectorAll(".comparison-add__item").forEach((item) => {
+    item.style.backgroundColor = "#ffffff";
+    item.addEventListener("mouseenter", () => {
+      item.style.backgroundColor = "#fdf6ec";
+    });
+    item.addEventListener("mouseleave", () => {
+      item.style.backgroundColor = "#ffffff";
+    });
+  });
+
+  // Dropdown Positoning
+  function positionDropdown() {
+    const rect = trigger.getBoundingClientRect();
+    dropdown.style.top = rect.bottom + 4 + "px";
+    dropdown.style.left = rect.left + "px";
+    dropdown.style.width = rect.width + "px";
+  }
+
+  // Open / close
+  function openDropdown() {
+    positionDropdown();
+    dropdown.style.display = "block";
+    trigger.setAttribute("aria-expanded", "true");
+    window.addEventListener("scroll", positionDropdown, { passive: true });
+    window.addEventListener("resize", positionDropdown, { passive: true });
+  }
+
+  function closeDropdown() {
+    dropdown.style.display = "none";
+    trigger.setAttribute("aria-expanded", "false");
+    window.removeEventListener("scroll", positionDropdown);
+    window.removeEventListener("resize", positionDropdown);
+  }
+
+  function isOpen() {
+    return dropdown.style.display === "block";
+  }
+
+  trigger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    isOpen() ? closeDropdown() : openDropdown();
+  });
+
+  // Close on outside click
   document.addEventListener("click", (e) => {
-    if (
-      !addProductTrigger.contains(e.target) &&
-      !addProductDropdown.contains(e.target)
-    ) {
-      addProductDropdown.classList.remove("is-open");
-      addProductTrigger.setAttribute("aria-expanded", "false");
+    if (!trigger.contains(e.target) && !dropdown.contains(e.target)) {
+      closeDropdown();
     }
   });
 
   // Keyboard support
-  addProductDropdown
-    .querySelectorAll(".comparison-add__item")
-    .forEach((item) => {
-      item.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          item.click();
-        }
-      });
+  dropdown.querySelectorAll(".comparison-add__item").forEach((item) => {
+    item.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        item.click();
+      }
     });
+  });
 
   // Item selection
-  addProductDropdown
-    .querySelectorAll(".comparison-add__item")
-    .forEach((item) => {
-      item.addEventListener("click", () => {
-        const name = item.querySelector(
-          ".comparison-add__item-name",
-        ).textContent;
-        addProductTrigger.querySelector("span").textContent = name;
-        addProductDropdown.classList.remove("is-open");
-        addProductTrigger.setAttribute("aria-expanded", "false");
-      });
+  dropdown.querySelectorAll(".comparison-add__item").forEach((item) => {
+    item.addEventListener("click", () => {
+      const name = item.querySelector(".comparison-add__item-name").textContent;
+      trigger.querySelector("span").textContent = name;
+      closeDropdown();
     });
+  });
 }
 
 // Add To Cart buttons
-const addToCartBtns = document.querySelectorAll(".comparison-atc-btn");
-addToCartBtns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {});
+document.querySelectorAll(".comparison-atc-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {});
 });
 
 // Scroll Reveal
@@ -97,23 +139,15 @@ if ("IntersectionObserver" in window) {
   const style = document.createElement("style");
   style.textContent = `
     .comparison-product, .comparison-add, .comparison-goto {
-      opacity: 0;
-      transform: translateY(20px);
+      opacity: 0; transform: translateY(20px);
       transition: opacity .5s ease, transform .5s ease;
     }
-    .reveal--visible {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-    }
+    .reveal--visible { opacity: 1 !important; transform: translateY(0) !important; }
     .comparison-table tbody tr {
-      opacity: 0;
-      transform: translateY(10px);
+      opacity: 0; transform: translateY(10px);
       transition: opacity .35s ease, transform .35s ease;
     }
-    .comparison-table tbody tr.row--visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .comparison-table tbody tr.row--visible { opacity: 1; transform: translateY(0); }
   `;
   document.head.appendChild(style);
 

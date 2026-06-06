@@ -263,7 +263,7 @@ function showToast(message) {
   }, 2800);
 }
 
-// Add to Cart (main product)
+// Main Product
 const addToCartBtn = document.getElementById("addToCartBtn");
 if (addToCartBtn) {
   addToCartBtn.addEventListener("click", () => {
@@ -479,7 +479,6 @@ const MOBILE_BP = 700;
 const isMobile = () => window.innerWidth <= MOBILE_BP;
 
 // Tab Panel Images
-
 const tabImagesContainer = document.getElementById("tabPanelImages");
 let tabImgCarouselBuilt = false;
 

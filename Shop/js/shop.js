@@ -196,7 +196,7 @@ document
     }
   });
 
-// Smooth scroll for # links
+// Smooth scroll
 document.querySelectorAll('a[href="#"]').forEach((anchor) => {
   anchor.addEventListener("click", (e) => {
     e.preventDefault();

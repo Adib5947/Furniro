@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="./css/comparison.css" />
   </head>
   <body>
-    <!-- Header -->
     <header class="site-header">
       <div class="site-header__inner u-container">
         <a href="../Home/index.html" class="site-header__brand brand-mark">
@@ -26,6 +25,7 @@
           <span class="brand-mark__name">Furniro</span>
         </a>
 
+        <!-- Hamburger -->
         <button
           class="nav-hamburger"
           type="button"
@@ -33,9 +33,16 @@
           aria-expanded="false"
           aria-controls="main-nav"
         >
-          <span class="nav-hamburger__bar"></span>
-          <span class="nav-hamburger__bar"></span>
-          <span class="nav-hamburger__bar"></span>
+          <img
+            src="./images/navbar.svg"
+            alt="Open menu"
+            class="nav-hamburger__icon nav-hamburger__icon--open"
+          />
+          <img
+            src="./images/navbar_close.svg"
+            alt="Close menu"
+            class="nav-hamburger__icon nav-hamburger__icon--close"
+          />
         </button>
 
         <nav class="site-header__nav nav-menu" id="main-nav">
@@ -43,7 +50,6 @@
           <a href="../Shop/shop.html" class="nav-menu__link">Shop</a>
           <a href="../About/about.html" class="nav-menu__link">About</a>
           <a href="../Contact/contact.html" class="nav-menu__link">Contact</a>
-
           <div
             class="site-header__actions header-actions header-actions--mobile"
           >
@@ -114,7 +120,6 @@
     </header>
 
     <main>
-      <!-- Hero -->
       <section class="page-hero">
         <img
           src="../Home/images/rectangle 1.png"
@@ -137,7 +142,6 @@
         </div>
       </section>
 
-      <!-- Comparison Section -->
       <section class="comparison-section">
         <div class="comparison-section__inner u-container">
           <div class="comparison-goto">
@@ -149,7 +153,6 @@
             >
           </div>
 
-          <!-- Product Column 1: Asgaard Sofa -->
           <div class="comparison-product" id="compProduct1">
             <div class="comparison-product__card">
               <img
@@ -160,19 +163,20 @@
               <h3 class="comparison-product__name">Asgaard Sofa</h3>
               <p class="comparison-product__price">Rs. 250,000.00</p>
               <div class="comparison-product__rating">
-                <img src="./images/star-filled.svg" alt="" />
-                <img src="./images/star-filled.svg" alt="" />
-                <img src="./images/star-filled.svg" alt="" />
-                <img src="./images/star-filled.svg" alt="" />
-                <img src="./images/star-half.svg" alt="" />
+                <img src="./images/star-filled.svg" alt="" /><img
+                  src="./images/star-filled.svg"
+                  alt=""
+                /><img src="./images/star-filled.svg" alt="" /><img
+                  src="./images/star-filled.svg"
+                  alt=""
+                /><img src="./images/star-half.svg" alt="" />
                 <span class="comparison-product__rating-count"
-                  >4.7 &nbsp; | &nbsp; 204 Review</span
+                  >4.7 &nbsp;|&nbsp; 204 Review</span
                 >
               </div>
             </div>
           </div>
 
-          <!-- Product Column 2: Outdoor Sofa Set -->
           <div class="comparison-product" id="compProduct2">
             <div class="comparison-product__card">
               <img
@@ -183,19 +187,20 @@
               <h3 class="comparison-product__name">Outdoor Sofa Set</h3>
               <p class="comparison-product__price">Rs. 224,000.00</p>
               <div class="comparison-product__rating">
-                <img src="./images/star-filled.svg" alt="" />
-                <img src="./images/star-filled.svg" alt="" />
-                <img src="./images/star-filled.svg" alt="" />
-                <img src="./images/star-filled.svg" alt="" />
-                <img src="./images/star-half.svg" alt="" />
+                <img src="./images/star-filled.svg" alt="" /><img
+                  src="./images/star-filled.svg"
+                  alt=""
+                /><img src="./images/star-filled.svg" alt="" /><img
+                  src="./images/star-filled.svg"
+                  alt=""
+                /><img src="./images/star-half.svg" alt="" />
                 <span class="comparison-product__rating-count"
-                  >4.2 &nbsp; | &nbsp; 145 Review</span
+                  >4.2 &nbsp;|&nbsp; 145 Review</span
                 >
               </div>
             </div>
           </div>
 
-          <!-- Add A Product -->
           <div class="comparison-add" id="compAdd">
             <p class="comparison-add__label">Add A Product</p>
             <div class="comparison-add__dropdown-wrap">
@@ -207,7 +212,6 @@
                 aria-haspopup="listbox"
               >
                 <span>Choose a Product</span>
-
                 <img
                   src="./images/arrow-down.svg"
                   alt=""
@@ -228,8 +232,8 @@
                 >
                   <img src="../Home/images/product-1.png" alt="Syltherine" />
                   <div>
-                    <span class="comparison-add__item-name">Syltherine</span>
-                    <span class="comparison-add__item-sub">Rp 2.500.000</span>
+                    <span class="comparison-add__item-name">Syltherine</span
+                    ><span class="comparison-add__item-sub">Rp 2.500.000</span>
                   </div>
                 </li>
                 <li
@@ -240,8 +244,8 @@
                 >
                   <img src="../Home/images/product-2.png" alt="Leviosa" />
                   <div>
-                    <span class="comparison-add__item-name">Leviosa</span>
-                    <span class="comparison-add__item-sub">Rp 2.500.000</span>
+                    <span class="comparison-add__item-name">Leviosa</span
+                    ><span class="comparison-add__item-sub">Rp 2.500.000</span>
                   </div>
                 </li>
                 <li
@@ -252,8 +256,8 @@
                 >
                   <img src="../Home/images/product-3.png" alt="Lolito" />
                   <div>
-                    <span class="comparison-add__item-name">Lolito</span>
-                    <span class="comparison-add__item-sub">Rp 7.000.000</span>
+                    <span class="comparison-add__item-name">Lolito</span
+                    ><span class="comparison-add__item-sub">Rp 7.000.000</span>
                   </div>
                 </li>
                 <li
@@ -264,8 +268,8 @@
                 >
                   <img src="../Home/images/product-4.png" alt="Respira" />
                   <div>
-                    <span class="comparison-add__item-name">Respira</span>
-                    <span class="comparison-add__item-sub">Rp 500.000</span>
+                    <span class="comparison-add__item-name">Respira</span
+                    ><span class="comparison-add__item-sub">Rp 500.000</span>
                   </div>
                 </li>
                 <li
@@ -276,8 +280,8 @@
                 >
                   <img src="../Home/images/product-5.png" alt="Grifo" />
                   <div>
-                    <span class="comparison-add__item-name">Grifo</span>
-                    <span class="comparison-add__item-sub">Rp 1.500.000</span>
+                    <span class="comparison-add__item-name">Grifo</span
+                    ><span class="comparison-add__item-sub">Rp 1.500.000</span>
                   </div>
                 </li>
                 <li
@@ -288,8 +292,8 @@
                 >
                   <img src="../Home/images/product-6.png" alt="Muggo" />
                   <div>
-                    <span class="comparison-add__item-name">Muggo</span>
-                    <span class="comparison-add__item-sub">Rp 150.000</span>
+                    <span class="comparison-add__item-name">Muggo</span
+                    ><span class="comparison-add__item-sub">Rp 150.000</span>
                   </div>
                 </li>
                 <li
@@ -300,8 +304,8 @@
                 >
                   <img src="../Home/images/product-7.png" alt="Pingky" />
                   <div>
-                    <span class="comparison-add__item-name">Pingky</span>
-                    <span class="comparison-add__item-sub">Rp 7.000.000</span>
+                    <span class="comparison-add__item-name">Pingky</span
+                    ><span class="comparison-add__item-sub">Rp 7.000.000</span>
                   </div>
                 </li>
                 <li
@@ -312,8 +316,8 @@
                 >
                   <img src="../Home/images/product-8.png" alt="Potty" />
                   <div>
-                    <span class="comparison-add__item-name">Potty</span>
-                    <span class="comparison-add__item-sub">Rp 2.500.000</span>
+                    <span class="comparison-add__item-name">Potty</span
+                    ><span class="comparison-add__item-sub">Rp 2.500.000</span>
                   </div>
                 </li>
               </ul>
@@ -322,7 +326,6 @@
         </div>
       </section>
 
-      <!-- Comparison Table -->
       <div class="comparison-table-wrap u-container">
         <table class="comparison-table" role="table">
           <colgroup>
@@ -331,8 +334,6 @@
             <col />
             <col />
           </colgroup>
-
-          <!-- General -->
           <tbody class="comparison-tbody">
             <tr class="comparison-section-header">
               <td colspan="4"><h4>General</h4></td>
@@ -374,8 +375,6 @@
               <td></td>
             </tr>
           </tbody>
-
-          <!-- Product -->
           <tbody class="comparison-tbody">
             <tr class="comparison-section-header">
               <td colspan="4"><h4>Product</h4></td>
@@ -411,8 +410,6 @@
               <td></td>
             </tr>
           </tbody>
-
-          <!-- Dimensions -->
           <tbody class="comparison-tbody">
             <tr class="comparison-section-header">
               <td colspan="4"><h4>Dimensions</h4></td>
@@ -454,8 +451,6 @@
               <td></td>
             </tr>
           </tbody>
-
-          <!-- Warranty -->
           <tbody class="comparison-tbody">
             <tr class="comparison-section-header">
               <td colspan="4"><h4>Warranty</h4></td>
@@ -507,8 +502,6 @@
               <td>3 Months</td>
               <td></td>
             </tr>
-
-            <!-- Add to Cart row -->
             <tr class="comparison-atc-row">
               <td></td>
               <td>
@@ -532,7 +525,6 @@
         </table>
       </div>
 
-      <!-- Trust Strip -->
       <section class="trust-strip">
         <div class="trust-strip__inner u-container">
           <div class="trust-item">
@@ -542,11 +534,10 @@
               class="trust-item__icon"
             />
             <div class="trust-item__text">
-              <strong>High Quality</strong>
-              <span>crafted from top materials</span>
+              <strong>High Quality</strong
+              ><span>crafted from top materials</span>
             </div>
           </div>
-
           <div class="trust-item">
             <img
               src="../Home/images/guarantee.svg"
@@ -554,11 +545,9 @@
               class="trust-item__icon"
             />
             <div class="trust-item__text">
-              <strong>Warranty Protection</strong>
-              <span>Over 2 years</span>
+              <strong>Warranty Protection</strong><span>Over 2 years</span>
             </div>
           </div>
-
           <div class="trust-item">
             <img
               src="../Home/images/shipping.svg"
@@ -566,11 +555,9 @@
               class="trust-item__icon"
             />
             <div class="trust-item__text">
-              <strong>Free Shipping</strong>
-              <span>Order over 150 $</span>
+              <strong>Free Shipping</strong><span>Order over 150 $</span>
             </div>
           </div>
-
           <div class="trust-item">
             <img
               src="../Home/images/customer-support.svg"
@@ -578,15 +565,13 @@
               class="trust-item__icon"
             />
             <div class="trust-item__text">
-              <strong>24 / 7 Support</strong>
-              <span>Dedicated support</span>
+              <strong>24 / 7 Support</strong><span>Dedicated support</span>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
       <div class="site-footer__top u-container">
         <div class="site-footer__brand-block">
@@ -595,7 +580,6 @@
             400 University Drive Suite 200 Coral Gables, FL 33134 USA
           </p>
         </div>
-
         <div class="site-footer__group">
           <h4 class="site-footer__group-title">Links</h4>
           <a href="../Home/index.html" class="site-footer__link">Home</a>
@@ -605,14 +589,12 @@
             >Contact</a
           >
         </div>
-
         <div class="site-footer__group">
           <h4 class="site-footer__group-title">Help</h4>
           <a href="#" class="site-footer__link">Payment Options</a>
           <a href="#" class="site-footer__link">Returns</a>
           <a href="#" class="site-footer__link">Privacy Policies</a>
         </div>
-
         <div class="site-footer__group site-footer__group--newsletter">
           <h4 class="site-footer__group-title">Newsletter</h4>
           <form class="site-footer__newsletter" action="#" method="post">
@@ -627,7 +609,6 @@
           </form>
         </div>
       </div>
-
       <div class="site-footer__bottom u-container">
         <p class="site-footer__copyright">2023 furino. All rights reverved</p>
       </div>
