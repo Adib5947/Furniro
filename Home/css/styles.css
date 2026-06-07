@@ -1249,7 +1249,7 @@ button {
   .site-header__nav.nav-menu {
     order: 4;
     position: absolute;
-    top: 64px;
+    top: 100px;
     left: 0;
     right: 0;
     width: 100%;
