@@ -452,7 +452,7 @@ button {
   transition: transform 0.3s ease;
 }
 
-/* Textarea (Additional information) */
+/* Additional information */
 
 .billing-form__textarea {
   width: 453px;
