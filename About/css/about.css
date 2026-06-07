@@ -1317,9 +1317,10 @@ button {
 
   .nav-menu__link--active {
     color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
   }
   .nav-menu__link--active::after {
-    width: 100%;
+    display: none;
   }
 
   .header-actions--mobile {

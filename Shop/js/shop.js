@@ -79,8 +79,6 @@ viewBtns.forEach((btn) => {
     if (isMobile()) {
       buildCarousel();
     }
-
-    initCardTilt();
   });
 });
 
