@@ -67,3 +67,90 @@ document
       console.log("Button clicked:", btn.textContent);
     });
   });
+
+// Mobile breakpoint
+const MOBILE_BP = 700;
+const isMobileView = () => window.innerWidth <= MOBILE_BP;
+
+// Craftsmanship arrow slider
+const craftGrid = document.getElementById("craftGrid");
+const craftPrev = document.querySelector(".craft-nav--prev");
+const craftNext = document.querySelector(".craft-nav--next");
+
+function updateCraftNav() {
+  if (!craftGrid || !craftPrev || !craftNext) return;
+  const scrollLeft = Math.round(craftGrid.scrollLeft);
+  const maxScroll = Math.round(craftGrid.scrollWidth - craftGrid.clientWidth);
+  craftPrev.classList.toggle("craft-nav--hidden", scrollLeft <= 0);
+  craftNext.classList.toggle("craft-nav--hidden", scrollLeft >= maxScroll - 2);
+}
+
+if (craftGrid && craftNext && craftPrev) {
+  craftNext.addEventListener("click", () => {
+    const card = craftGrid.querySelector(".craft-card");
+    const amount = card ? card.offsetWidth : craftGrid.clientWidth;
+    craftGrid.scrollBy({ left: amount, behavior: "smooth" });
+  });
+  craftPrev.addEventListener("click", () => {
+    const card = craftGrid.querySelector(".craft-card");
+    const amount = card ? card.offsetWidth : craftGrid.clientWidth;
+    craftGrid.scrollBy({ left: -amount, behavior: "smooth" });
+  });
+  craftGrid.addEventListener("scroll", updateCraftNav);
+  updateCraftNav();
+}
+
+// Team dot carousel
+const teamGrid = document.getElementById("teamGrid");
+let teamDotsBuilt = false;
+
+function buildTeamDots() {
+  if (!teamGrid || teamDotsBuilt) return;
+  const cards = Array.from(teamGrid.querySelectorAll(".team-card"));
+  if (!cards.length) return;
+
+  const dotsWrap = document.createElement("div");
+  dotsWrap.className = "team-carousel-dots";
+  const dots = cards.map((_, i) => {
+    const d = document.createElement("span");
+    d.className = "carousel-dot" + (i === 0 ? " active" : "");
+    dotsWrap.appendChild(d);
+    return d;
+  });
+  teamGrid.parentElement.appendChild(dotsWrap);
+
+  teamGrid.addEventListener("scroll", () => {
+    const first = teamGrid.firstElementChild;
+    if (!first) return;
+    const gap = parseFloat(getComputedStyle(teamGrid).gap) || 14;
+    const unit = first.offsetWidth + gap;
+    const active = Math.round(teamGrid.scrollLeft / unit);
+    dots.forEach((d, i) => d.classList.toggle("active", i === active));
+  });
+
+  teamDotsBuilt = true;
+}
+
+function destroyTeamDots() {
+  if (!teamGrid || !teamDotsBuilt) return;
+  const dots = teamGrid.parentElement.querySelector(".team-carousel-dots");
+  if (dots) dots.remove();
+  teamDotsBuilt = false;
+}
+
+function applyAboutLayout() {
+  if (isMobileView()) {
+    buildTeamDots();
+    updateCraftNav();
+  } else {
+    destroyTeamDots();
+  }
+}
+
+let aboutResizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(aboutResizeTimer);
+  aboutResizeTimer = setTimeout(applyAboutLayout, 120);
+});
+
+applyAboutLayout();

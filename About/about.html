@@ -33,9 +33,16 @@
           aria-expanded="false"
           aria-controls="main-nav"
         >
-          <span class="nav-hamburger__bar"></span>
-          <span class="nav-hamburger__bar"></span>
-          <span class="nav-hamburger__bar"></span>
+          <img
+            src="./images/navbar.svg"
+            alt="Open menu"
+            class="nav-hamburger__icon nav-hamburger__icon--open"
+          />
+          <img
+            src="./images/navbar_close.svg"
+            alt="Close menu"
+            class="nav-hamburger__icon nav-hamburger__icon--close"
+          />
         </button>
 
         <nav class="site-header__nav nav-menu" id="main-nav">
@@ -215,7 +222,7 @@
             <h2 class="about-craft__title">Built With Care. Made To Last.</h2>
           </div>
 
-          <div class="about-craft__grid">
+          <div class="about-craft__grid" id="craftGrid">
             <div class="craft-card">
               <div class="craft-card__media">
                 <img
@@ -276,6 +283,21 @@
               </div>
             </div>
           </div>
+
+          <button
+            class="craft-nav craft-nav--prev"
+            type="button"
+            aria-label="Previous"
+          >
+            <img src="./images/next-slide-arrow.svg" alt="Previous" />
+          </button>
+          <button
+            class="craft-nav craft-nav--next"
+            type="button"
+            aria-label="Next"
+          >
+            <img src="./images/next-slide-arrow.svg" alt="Next" />
+          </button>
         </div>
       </section>
 
@@ -287,7 +309,7 @@
             <h2 class="about-team__title">The People Behind Furniro</h2>
           </div>
 
-          <div class="about-team__grid">
+          <div class="about-team__grid" id="teamGrid">
             <div class="team-card">
               <div class="team-card__media">
                 <img

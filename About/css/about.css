@@ -187,46 +187,57 @@ button {
   transform: scale(1.12);
 }
 
-/* Hamburger Menu */
-
+/* Hamburger */
 .nav-hamburger {
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  width: 40px;
-  height: 40px;
-  background: transparent;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  padding: 0;
   border: none;
+  background: transparent;
   cursor: pointer;
-  padding: 4px;
-  z-index: 200;
-  order: 2;
   flex-shrink: 0;
+  order: 2;
+  margin-left: auto;
+  align-self: center;
+  line-height: 0;
+  font-size: 0;
 }
 
-.nav-hamburger__bar {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: #000;
-  border-radius: 2px;
+.nav-hamburger__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
   transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
-  transform-origin: center;
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  pointer-events: none;
 }
 
-.nav-hamburger.is-open .nav-hamburger__bar:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+.nav-hamburger__icon--open {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
 }
-.nav-hamburger.is-open .nav-hamburger__bar:nth-child(2) {
+.nav-hamburger__icon--close {
   opacity: 0;
-  transform: scaleX(0);
+  transform: translate(-50%, -50%) rotate(-90deg) scale(0.7);
 }
-.nav-hamburger.is-open .nav-hamburger__bar:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+.nav-hamburger.is-open .nav-hamburger__icon--open {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg) scale(0.7);
+}
+.nav-hamburger.is-open .nav-hamburger__icon--close {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+}
+
+.nav-hamburger__icon--close {
+  width: 36px;
+  height: 36px;
 }
 
 /* Hero Banner */
@@ -439,6 +450,51 @@ button {
 
 .about-craft {
   padding: 40px 0 80px;
+}
+
+.about-craft__inner {
+  position: relative;
+}
+
+/* Craft slider arrows */
+.craft-nav {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-white);
+  box-shadow: 0 4px 14px rgb(0 0 0 / 16%);
+  place-items: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.craft-nav img {
+  width: 20px;
+  height: 20px;
+  transition: filter 0.3s ease;
+}
+.craft-nav:hover {
+  background: var(--color-bg-hero-card);
+}
+.craft-nav:hover img {
+  filter: brightness(0);
+}
+.craft-nav--prev {
+  left: 8px;
+}
+.craft-nav--prev img {
+  transform: rotate(180deg);
+}
+.craft-nav--next {
+  right: 8px;
+}
+.craft-nav--hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .about-craft__header {
@@ -1188,23 +1244,40 @@ button {
     width: min(100% - 32px, var(--container-width));
   }
 
+  /* Header */
+  .site-header {
+    height: 100px;
+    min-height: 0;
+    padding: 0;
+    overflow: visible;
+  }
   .site-header__inner {
-    padding-left: 16px;
-    padding-right: 16px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    height: 100px;
+    padding: 0 16px;
     gap: 0;
     row-gap: 0;
+    position: relative;
   }
-
+  .site-header__brand {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
   .brand-mark__name {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .nav-hamburger {
     display: flex;
-    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-left: 0;
+    align-self: center;
   }
 
   .header-actions--desktop {
@@ -1213,6 +1286,10 @@ button {
 
   .site-header__nav.nav-menu {
     order: 4;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
@@ -1225,14 +1302,13 @@ button {
     padding: 0 16px;
     background: var(--color-white);
     border-top: 1px solid transparent;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 99;
   }
-
   .site-header__nav.nav-menu.nav-menu--open {
     max-height: 400px;
     padding: 12px 16px 16px;
-    border-top-color: var(--color-border);
   }
-
   .nav-menu__link {
     width: 100%;
     padding: 12px 0;
@@ -1242,7 +1318,6 @@ button {
   .nav-menu__link--active {
     color: var(--color-primary);
   }
-
   .nav-menu__link--active::after {
     width: 100%;
   }
@@ -1314,8 +1389,25 @@ button {
   }
 
   .about-craft__grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    display: flex !important;
+    grid-template-columns: none;
+    gap: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+  .about-craft__grid::-webkit-scrollbar {
+    display: none;
+  }
+  .about-craft__grid .craft-card {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  .craft-nav {
+    display: grid;
   }
 
   /* Team */
@@ -1328,8 +1420,22 @@ button {
   }
 
   .about-team__grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    display: flex !important;
+    grid-template-columns: none;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px 4px 12px;
+  }
+  .about-team__grid::-webkit-scrollbar {
+    display: none;
+  }
+  .about-team__grid .team-card {
+    flex: 0 0 85%;
+    max-width: 340px;
+    scroll-snap-align: start;
   }
 
   .team-card__image {
@@ -1338,6 +1444,30 @@ button {
     max-height: 400px;
     object-fit: contain;
     object-position: top center;
+  }
+
+  /* Dots under team carousel */
+  .team-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-border);
+    transition:
+      background 0.25s,
+      width 0.25s;
+    flex-shrink: 0;
+    display: inline-block;
+  }
+  .carousel-dot.active {
+    background: var(--color-primary);
+    width: 20px;
+    border-radius: 4px;
   }
 
   /* CTA */
