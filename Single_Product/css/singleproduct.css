@@ -1522,48 +1522,47 @@ button {
 
   /* Related Products */
   .products__grid {
-    display: block !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
     margin-top: 16px;
     width: 100%;
+    align-items: stretch;
   }
-
-  /* Carousel row */
-  .products__grid .carousel-row {
+  .products__grid .product-card {
+    width: 100%;
     display: flex;
-    gap: 14px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding: 4px 4px 12px;
-    margin-bottom: 20px;
+    flex-direction: column;
   }
-  .products__grid .carousel-row::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Each card */
-  .products__grid .carousel-row .product-card {
-    flex: 0 0 calc(80vw - 32px);
-    max-width: 260px;
-    min-width: 180px;
-    scroll-snap-align: start;
-    width: auto !important;
-  }
-
-  .products__grid .carousel-row .product-card__media {
+  .products__grid .product-card__media {
     width: 100%;
     aspect-ratio: 285 / 301;
     height: auto;
   }
 
-  /* Overlay on small cards */
+  .products__grid .product-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .products__grid .product-card__price-row {
+    margin-top: auto;
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    height: 68px;
+    justify-content: flex-start;
+  }
+
+  /* Overlay */
   .product-card__overlay {
     gap: 14px;
     padding: 14px;
   }
   .product-card__overlay-cta {
     width: 100%;
+    max-width: 200px;
     height: 44px;
     font-size: 14px;
     display: flex;
@@ -1572,10 +1571,18 @@ button {
   }
   .product-card__overlay-actions {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     font-size: 14px;
+    gap: 8px 14px;
+  }
+  .product-card__overlay-actions span {
     gap: 4px;
+    white-space: nowrap;
+  }
+  .product-card__overlay-actions img {
+    width: 16px;
+    height: 16px;
   }
 
   /* Footer */

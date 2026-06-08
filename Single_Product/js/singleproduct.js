@@ -1,6 +1,6 @@
 "use strict";
 
-// Cart Sidebar (unchanged)
+// Cart Sidebar
 (function () {
   const sidebar = document.getElementById("cartSidebar");
   const overlay = document.getElementById("cartOverlay");
@@ -581,12 +581,12 @@ function destroyRelatedCarousel() {
 
 // Layout manager
 function applyLayout() {
+  destroyRelatedCarousel();
+
   if (isMobile()) {
     buildTabImgCarousel();
-    buildRelatedCarousel();
   } else {
     destroyTabImgCarousel();
-    destroyRelatedCarousel();
   }
 }
 
