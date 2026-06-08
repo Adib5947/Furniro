@@ -273,13 +273,13 @@ function destroySPCarousel() {
 // Layout Manager
 
 function applyLayout() {
+  destroyProductsCarousel();
+
   if (isMobile()) {
     buildRangeCarousel();
-    buildProductsCarousel();
     buildSPCarousel();
   } else {
     destroyRangeCarousel();
-    destroyProductsCarousel();
     destroySPCarousel();
   }
 }

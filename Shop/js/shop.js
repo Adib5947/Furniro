@@ -75,10 +75,6 @@ viewBtns.forEach((btn) => {
     } else {
       productsGrid.classList.remove("products__grid--list");
     }
-
-    if (isMobile()) {
-      buildCarousel();
-    }
   });
 });
 
@@ -319,10 +315,20 @@ function buildCarousel() {
 
 // Runs in any sizes
 function applyLayout() {
+  destroyCarousel();
+
   if (isMobile()) {
-    buildCarousel();
-  } else {
-    destroyCarousel();
+    if (productsGrid) productsGrid.classList.remove("products__grid--list");
+    const gridBtn = document.getElementById("viewGrid");
+    const listBtn = document.getElementById("viewList");
+    if (
+      gridBtn &&
+      listBtn &&
+      listBtn.classList.contains("toolbar-view--active")
+    ) {
+      listBtn.classList.remove("toolbar-view--active");
+      gridBtn.classList.add("toolbar-view--active");
+    }
   }
 }
 
@@ -334,3 +340,92 @@ window.addEventListener("resize", () => {
 });
 
 applyLayout();
+
+// Custom Dropdowns
+(function () {
+  const selects = document.querySelectorAll(".toolbar-select");
+  if (!selects.length) return;
+
+  let openDd = null;
+
+  function closeAll() {
+    if (openDd) {
+      openDd.classList.remove("nf-open");
+      openDd = null;
+    }
+  }
+
+  selects.forEach((select) => {
+    const wrap = select.closest(".toolbar-select-wrap");
+    if (!wrap) return;
+    wrap.classList.add("nf-has-custom");
+
+    const dd = document.createElement("div");
+    dd.className = "nf-dd";
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "nf-dd__btn";
+    btn.setAttribute("aria-haspopup", "listbox");
+    btn.setAttribute("aria-expanded", "false");
+
+    const menu = document.createElement("ul");
+    menu.className = "nf-dd__menu";
+    menu.setAttribute("role", "listbox");
+
+    const options = Array.from(select.options);
+
+    function syncLabel() {
+      btn.textContent = select.options[select.selectedIndex].textContent;
+    }
+
+    options.forEach((opt) => {
+      const li = document.createElement("li");
+      li.className = "nf-dd__option";
+      li.setAttribute("role", "option");
+      li.textContent = opt.textContent;
+      li.dataset.value = opt.value;
+      if (opt.selected) li.classList.add("nf-selected");
+
+      li.addEventListener("click", () => {
+        select.value = opt.value;
+        select.dispatchEvent(new Event("change", { bubbles: true }));
+
+        menu
+          .querySelectorAll(".nf-dd__option")
+          .forEach((o) => o.classList.remove("nf-selected"));
+        li.classList.add("nf-selected");
+        syncLabel();
+        closeAll();
+        btn.setAttribute("aria-expanded", "false");
+      });
+
+      menu.appendChild(li);
+    });
+
+    syncLabel();
+
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = dd.classList.contains("nf-open");
+      closeAll();
+      if (!isOpen) {
+        dd.classList.add("nf-open");
+        openDd = dd;
+        btn.setAttribute("aria-expanded", "true");
+      } else {
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    dd.appendChild(btn);
+    dd.appendChild(menu);
+    wrap.appendChild(dd);
+  });
+
+  // Close on outside click
+  document.addEventListener("click", () => closeAll());
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeAll();
+  });
+})();
